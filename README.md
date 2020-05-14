@@ -10,8 +10,11 @@ All information will get from Harry Potter API by GET requirement with personal 
 
 ### Functionality: 
 On loading page, user will get a random house name from clicking sorting Hat and then user will be led to relevant page there all characters belong to this house will be listed in some list form. Only names are listed there, and grouped by their role (teacher/student/etc.). There will be four houses, we can switch to different house by clicking relevant badge.
+
 Once user click a name, a overlay module will be displayed. User could see detailed information which get from that API, and also with one image of that character and a wand (if he/she has any). Maybe add extra information link to other fans website.
+
 Search function: User could be able to search their desired character by input name (validation needed: name length more than 2 and less than 20, only alphabet allowed).
+
 On loading page there will be a link to spell page, and there a random spell will be got from API. It will be able to go back to startpage as well as get a new spell. Add some animation if possible.
 
 ### Requirement:
@@ -21,15 +24,14 @@ On loading page there will be a link to spell page, and there a random spell wil
 
 ---
 Following are information that can get from API (https://www.potterapi.com/v1/) :
+
 GET     |-sortingHat (the only route that does not require a key)
 
         |-characters (Returns all characters.  195)
 
         |-characters/{characterId}
 
-        |-houses (Returns all Hogwarts Houses. 4. 
-
-        |          Gryffindor / Hufflepuff / Ravenclaw / Slytherin)
+        |-houses (Returns all Hogwarts Houses. 4  Gryffindor / Hufflepuff / Ravenclaw / Slytherin)
 
         |-houses/{houseId}
 
@@ -38,6 +40,7 @@ GET     |-sortingHat (the only route that does not require a key)
 **characters info structure: URL Query Parameters**
 
 **Param**            **Value**       **Description**
+
 key                   your api key    required   $2a$10$tE9Q/PpSuP7rQLFkrB2IOOcl.0ptM34qLwotYCBjL/p9DIL.o4pMK
 
 name                  string      
