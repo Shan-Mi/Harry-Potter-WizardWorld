@@ -22,31 +22,52 @@ On loading page there will be a link to spell page, and there a random spell wil
 ---
 Following are information that can get from API (https://www.potterapi.com/v1/) :
 GET     |-sortingHat (the only route that does not require a key)
+
         |-characters (Returns all characters.  195)
+
         |-characters/{characterId}
+
         |-houses (Returns all Hogwarts Houses. 4. 
-                  Gryffindor / Hufflepuff / Ravenclaw / Slytherin)
+
+        |          Gryffindor / Hufflepuff / Ravenclaw / Slytherin)
+
         |-houses/{houseId}
+
         |-spells (Returns all spells. 151)
 
 **characters info structure: URL Query Parameters**
 
 **Param**            **Value**       **Description**
 key                   your api key    required   $2a$10$tE9Q/PpSuP7rQLFkrB2IOOcl.0ptM34qLwotYCBjL/p9DIL.o4pMK
+
 name                  string      
+
 house                 string          Valid strings: (4)  'Gryffindor', 'Ravenclaw', 'Slytherin', 'Hufflepuff'
+
 patronus              string
+
 species               string          not required
+
 bloodStatus           string          Valid strings: (4)  'pure-blood', 'half-blood', 'muggle-born', unknown' 
+
 role                  string
+
 school                string
+
 deathEater            boolean
+
 dumbledoresArmy       boolean
+
 orderOfThePhoenix     boolean
+
 ministryOfMagic       boolean
+
 alias                 string
+
 wand                  string
+
 boggart               string
+
 animagus              string
 
 
