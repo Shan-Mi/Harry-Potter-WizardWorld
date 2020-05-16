@@ -1,30 +1,41 @@
-$(".js-sort").on("click", function() {
-	$(".main-content__wrapper")
-		.removeClass()
-		.addClass("main-content__wrapper");
-	$(".sorting-hat,.avatar__mouth").removeClass("animate");
+const sortMeBtn = document.querySelector('.js-sort')
+const sortMeAreaWrapper = document.querySelector('.main-content__wrapper')
+const sortingHat = document.querySelector('.sorting-hat')
+const avatarMouth = document.querySelector('.avatar__mouth')
+const houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"]
+let item = houses[Math.floor(Math.random() * houses.length)];
+let sortingHatAnswer = document.querySelector('.sorting-hat__answer')
+let genderSelector = document.querySelector('input[name=avatar-gender]')
+let hair = document.querySelector('.avatar__hair')
 
-	var houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"];
-	var item = houses[Math.floor(Math.random() * houses.length)];
+sortMeBtn.addEventListener('click', () => {
+  sortMeAreaWrapper.setAttribute('class', '')
+  sortMeAreaWrapper.classList.add('main-content__wrapper')
+  sortingHat.classList.remove('animate')
+  avatarMouth.classList.remove('animate')
 
-	setTimeout(function() {
-		$(".sorting-hat").addClass("animate");
-		$(".sorting-hat__answer").text(item + "!");
-	}, 1000);
-	setTimeout(function() {
-		$(".avatar__mouth").addClass("animate");
-	}, 1500);
-	setTimeout(function() {
-		$(".main-content__wrapper").addClass(item);
-	}, 4000);
-});
+  const houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"]
+  let item = houses[Math.floor(Math.random() * houses.length)]
+  setTimeout(function () {
+    sortingHat.classList.add('animate')
+    sortingHatAnswer.textContent = `${item} !`
+  }, 1000)
 
+  setTimeout(function () {
+    avatarMouth.classList.add('animate')
+  }, 1500)
 
-$('input[name=avatar-gender]').on('change', function(){
-	var value = $('input[name=avatar-gender]:checked').val();
-	if (value == 1) {
-		$('.avatar__hair').removeClass('female');
-	} else if (value == 2) {
-		$('.avatar__hair').addClass('female');
-	}
-});
+  setTimeout(function () {
+    sortMeAreaWrapper.classList.add(`${item}`)
+  }, 4000);
+})
+
+genderSelector.addEventListener('change', () => {
+  let value = genderSelector.querySelector('checked').value
+  value == 1 ? hair.classList.remove('female') : hair.classList.add('female')
+})
+
+const sortingHatAnchor = document.querySelector('#sorting-hat-anchor')
+setTimeout(function () {
+  sortingHatAnchor.scrollIntoView();
+}, 2000) //after 2 seconds, meet the sorting hat
