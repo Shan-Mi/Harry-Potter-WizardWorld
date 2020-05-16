@@ -1,20 +1,3 @@
-$beige: rgb(230, 186, 147);
-$beige-tone: rgb(219, 175, 136);
-$brown-light: #cc8351;
-$brown: rgb(133, 96, 69);
-$brown-dark: #6c4c34;
-$brown-darker: #815230;
-$brown-shade: rgb(115, 112, 107);
-
-$blue: #006daf;
-$blue-light: #c0d8e0;
-$silver: #ccc;
-$red: #ad343e;
-$gold: #ffbf00;
-$yellow: #eab000;
-$black: #111;
-$green: green;
-
 body {
   background: #f4f4f4;
   font-family: "Comfortaa", sans-serif;
@@ -48,6 +31,7 @@ aside.context {
   text-align: center;
   padding: 2em;
   transition: 0.3s ease;
+  height: 100vh;
 }
 
 @mixin bg-gradient($deg, $color1, $color2) {
@@ -178,20 +162,20 @@ aside.context {
   display: inline-block;
 
   &:before {
-    width: 320px;
-    height: 320px;
+    width: 20rem;
+    height: 20rem;
     background: rgba(255, 255, 255, 0.3);
     content: "";
     position: absolute;
     z-index: 0;
     border-radius: 50%;
-    left: -68px;
-    top: -155px;
+    left: -4.25rem;
+    top: -9.6875rem;
   }
 
   &__head {
-    width: 186px;
-    height: 132px;
+    width: 11.625rem;
+    height: 8.25rem;
     margin: auto;
     position: relative;
     background: linear-gradient(to bottom, $beige, $beige-tone);
@@ -202,20 +186,42 @@ aside.context {
   }
 
   &__eyes {
-    width: 35px;
-    height: 38px;
+    width: 2.2rem;
+    height: 2.375rem;
     border-radius: 50%;
     background: #333;
     position: absolute;
-    top: 50px;
+    top: 3.125rem;
     z-index: 2;
 
     &.left {
       left: 30px;
+
+      &.female::after {
+        content: "‿";
+        width: 5px;
+        position: absolute;
+        color: #333;
+        left: -8px;
+        top: -24px;
+        font-size: 27px;
+
+      }
     }
 
     &.right {
       right: 30px;
+
+      &.female::after {
+        content: "‿";
+        width: 5px;
+        position: absolute;
+        color: #333;
+        left: 19px;
+        top: -25px;
+        font-size: 27px;
+
+      }
     }
 
     &:before {
@@ -370,7 +376,8 @@ aside.context {
 
 .sorting-hat {
   position: relative;
-  height: 300px;
+  // height: 300px;
+  height: 15rem;
 
   &__top {
     position: relative;
@@ -390,7 +397,7 @@ aside.context {
       background: $brown-darker;
       width: 165px;
       height: 70px;
-      bottom: 20px;
+      bottom: 14px;
       left: 5px;
       border-radius: 50% 50% 120% 10% / 130% 130% 25% 25%;
     }
@@ -398,7 +405,7 @@ aside.context {
     &:after {
       content: "";
       position: absolute;
-      bottom: 65px;
+      bottom: 59px;
       left: 15px;
       border-left: 80px solid transparent;
       border-right: 65px solid transparent;
@@ -412,7 +419,7 @@ aside.context {
     height: 35px;
     border-radius: 50%;
     margin: auto;
-    top: 195px;
+    top: 144px;
     position: relative;
     z-index: 12;
     margin-top: -50px;
@@ -427,7 +434,7 @@ aside.context {
     position: absolute;
     margin: auto;
     left: 50%;
-    bottom: 100px;
+    bottom: 58px;
     margin-left: -48px;
     border-radius: 100% 0px;
     transform: rotate(50deg);
@@ -448,7 +455,7 @@ aside.context {
     background: $brown-dark;
     position: absolute;
     margin: auto;
-    bottom: 70px;
+    bottom: 37px;
     left: 50%;
     margin-left: -75px;
     z-index: 15;
@@ -468,7 +475,7 @@ aside.context {
     transform: rotate(-15deg);
     left: 50%;
     margin-left: -220px;
-    top: 100px;
+    top: 37px;
     display: inline-block;
     z-index: 5;
     width: 0;
@@ -596,7 +603,7 @@ aside.context {
   }
 
   .sorting-hat__top {
-    top: 220px;
+    top: 170px;
     transition: 0.6s ease;
     opacity: 1;
   }
@@ -714,6 +721,158 @@ aside.context {
 }
 
 /* animation ends */
-.main-content__wrapper{
+.main-content__wrapper {
   background: url('../img/hogwarts.png');
+}
+
+#front-page-header {
+  background: left / cover no-repeat url('../img/films-desk.webp');
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h1 {
+
+    top: 1rem;
+    color: #f1c40f;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .title {
+    width: 400px;
+    top: 50%;
+    filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+    top: 50%;
+    margin: 2rem auto;
+  }
+
+  .frontPageBadge {
+    width: 190px;
+  }
+
+  .sorting-hat-img {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10vw;
+    animation: jello-vertical 1.5s both infinite;
+  }
+
+  //need to change position when it comes to smaller screen
+  .spell {
+    order: 1;
+
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+  }
+
+  .quiz {
+    padding: 1.5rem;
+    background: rgb(80, 126, 177);
+    background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+    border-radius: 10px;
+    color: $gryffindor-red;
+    font-size: 16px;
+    transition: transform .3s;
+    animation: tada 2s timing-function delay iteration-count direction fill-mode;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#fp-main {
+  position: relative;
+
+  h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .poem {
+    color: $silver;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.pull-left {
+      margin-left: auto;
+      padding-right: 5rem;
+    }
+
+    &.pull-right {
+      right: 0;
+      margin-right: 2rem;
+      text-align: right;
+    }
+  }
 }

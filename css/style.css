@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::before,
@@ -16,6 +17,7 @@ html {
 a {
   -webkit-text-decoration-color: unset;
           text-decoration-color: unset;
+  text-decoration: none;
 }
 
 body {
@@ -51,6 +53,7 @@ aside.context .explanation {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  height: 100vh;
 }
 
 .gryffindor {
@@ -164,20 +167,20 @@ aside.context .explanation {
 }
 
 .avatar:before {
-  width: 320px;
-  height: 320px;
+  width: 20rem;
+  height: 20rem;
   background: rgba(255, 255, 255, 0.3);
   content: "";
   position: absolute;
   z-index: 0;
   border-radius: 50%;
-  left: -68px;
-  top: -155px;
+  left: -4.25rem;
+  top: -9.6875rem;
 }
 
 .avatar__head {
-  width: 186px;
-  height: 132px;
+  width: 11.625rem;
+  height: 8.25rem;
   margin: auto;
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#e6ba93), to(#dbaf88));
@@ -190,12 +193,12 @@ aside.context .explanation {
 }
 
 .avatar__eyes {
-  width: 35px;
-  height: 38px;
+  width: 2.2rem;
+  height: 2.375rem;
   border-radius: 50%;
   background: #333;
   position: absolute;
-  top: 50px;
+  top: 3.125rem;
   z-index: 2;
 }
 
@@ -203,8 +206,28 @@ aside.context .explanation {
   left: 30px;
 }
 
+.avatar__eyes.left.female::after {
+  content: "‿";
+  width: 5px;
+  position: absolute;
+  color: #333;
+  left: -8px;
+  top: -24px;
+  font-size: 27px;
+}
+
 .avatar__eyes.right {
   right: 30px;
+}
+
+.avatar__eyes.right.female::after {
+  content: "‿";
+  width: 5px;
+  position: absolute;
+  color: #333;
+  left: 19px;
+  top: -25px;
+  font-size: 27px;
 }
 
 .avatar__eyes:before {
@@ -363,7 +386,7 @@ aside.context .explanation {
 
 .sorting-hat {
   position: relative;
-  height: 300px;
+  height: 15rem;
 }
 
 .sorting-hat__top {
@@ -386,7 +409,7 @@ aside.context .explanation {
   background: #815230;
   width: 165px;
   height: 70px;
-  bottom: 20px;
+  bottom: 14px;
   left: 5px;
   border-radius: 50% 50% 120% 10% / 130% 130% 25% 25%;
 }
@@ -394,7 +417,7 @@ aside.context .explanation {
 .sorting-hat__top:after {
   content: "";
   position: absolute;
-  bottom: 65px;
+  bottom: 59px;
   left: 15px;
   border-left: 80px solid transparent;
   border-right: 65px solid transparent;
@@ -407,7 +430,7 @@ aside.context .explanation {
   height: 35px;
   border-radius: 50%;
   margin: auto;
-  top: 195px;
+  top: 144px;
   position: relative;
   z-index: 12;
   margin-top: -50px;
@@ -422,7 +445,7 @@ aside.context .explanation {
   position: absolute;
   margin: auto;
   left: 50%;
-  bottom: 100px;
+  bottom: 58px;
   margin-left: -48px;
   border-radius: 100% 0px;
   -webkit-transform: rotate(50deg);
@@ -447,7 +470,7 @@ aside.context .explanation {
   background: #6c4c34;
   position: absolute;
   margin: auto;
-  bottom: 70px;
+  bottom: 37px;
   left: 50%;
   margin-left: -75px;
   z-index: 15;
@@ -471,7 +494,7 @@ aside.context .explanation {
           transform: rotate(-15deg);
   left: 50%;
   margin-left: -220px;
-  top: 100px;
+  top: 37px;
   display: inline-block;
   z-index: 5;
   width: 0;
@@ -605,7 +628,7 @@ aside.context .explanation {
 }
 
 .sorting-hat.animate .sorting-hat__top {
-  top: 220px;
+  top: 170px;
   -webkit-transition: 0.6s ease;
   -o-transition: 0.6s ease;
   transition: 0.6s ease;
@@ -819,5 +842,244 @@ aside.context .explanation {
 /* animation ends */
 .main-content__wrapper {
   background: url("../img/hogwarts.png");
+}
+
+#front-page-header {
+  background: left/cover no-repeat url("../img/films-desk.webp");
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#front-page-header h1 {
+  top: 1rem;
+  color: #f1c40f;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#front-page-header .title {
+  width: 400px;
+  top: 50%;
+  -webkit-filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+          filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+  top: 50%;
+  margin: 2rem auto;
+}
+
+#front-page-header .frontPageBadge {
+  width: 190px;
+}
+
+#front-page-header .sorting-hat-img {
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10vw;
+  -webkit-animation: jello-vertical 1.5s both infinite;
+          animation: jello-vertical 1.5s both infinite;
+}
+
+#front-page-header .spell {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 1220px) {
+  #front-page-header .spell {
+    display: none;
+  }
+}
+
+#front-page-header .quiz {
+  padding: 1.5rem;
+  background: #507eb1;
+  background: -o-linear-gradient(330deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+  background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+  border-radius: 10px;
+  color: #7F0909;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-animation: tada 2s timing-function delay iteration-count direction fill-mode;
+          animation: tada 2s timing-function delay iteration-count direction fill-mode;
+}
+
+#front-page-header .quiz:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@-webkit-keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+#fp-main {
+  position: relative;
+}
+
+#fp-main h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+
+#fp-main .poem {
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#fp-main .poem.pull-left {
+  margin-left: auto;
+  padding-right: 5rem;
+}
+
+#fp-main .poem.pull-right {
+  right: 0;
+  margin-right: 2rem;
+  text-align: right;
 }
 /*# sourceMappingURL=style.css.map */
