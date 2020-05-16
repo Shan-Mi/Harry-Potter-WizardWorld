@@ -6,6 +6,7 @@ const houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"]
 const leftEye = document.querySelector('.avatar__eyes.left')
 const rightEye = document.querySelector('.avatar__eyes.right')
 const mouth = document.querySelector('.avatar__mouth')
+const jumpToAnswerLink = document.querySelector('#jumpToAnswerLink')
 
 let item = houses[Math.floor(Math.random() * houses.length)];
 let sortingHatAnswer = document.querySelector('.sorting-hat__answer')
@@ -21,6 +22,8 @@ sortMeBtn.addEventListener('click', () => {
 
   const houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"]
   let item = houses[Math.floor(Math.random() * houses.length)]
+  jumpToAnswerLink.setAttribute('href', `${item}.html`)
+
   setTimeout(function () {
     sortingHat.classList.add('animate')
     sortingHatAnswer.textContent = `${item} !`
@@ -44,7 +47,6 @@ genderSelectors.forEach(genderSelector => {
     value == 1 ? leftEye.classList.remove('female') : leftEye.classList.add('female')
     value == 1 ? rightEye.classList.remove('female') : rightEye.classList.add('female')
     value == 1 ? mouth.style.background = "#333" : mouth.style.background = "#e17055"
-
   })
 })
 
