@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *,
 *::before,
@@ -24,6 +23,10 @@ a {
 
 button:hover {
   cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
 }
 
 #spell-body {
@@ -209,14 +212,6 @@ body {
   height: 100vh;
 }
 
-.gryffindor {
-  background: #ad343e;
-}
-
-.gryffindor .avatar__coat:before, .gryffindor .avatar__coat:after {
-  background: #ad343e;
-}
-
 .gryffindor .avatar__tie {
   background: -o-linear-gradient(144deg, #ad343e 5%, #ffbf00 5%, #ffbf00 10%, #ad343e 10%, #ad343e 20%, #ffbf00 20%, #ffbf00 30%, #ad343e 30%, #ad343e 45%, #ffbf00 45%, #ffbf00 55%, #ad343e 55%, #ad343e 65%, #ffbf00 65%, #ffbf00 70%);
   background: linear-gradient(306deg, #ad343e 5%, #ffbf00 5%, #ffbf00 10%, #ad343e 10%, #ad343e 20%, #ffbf00 20%, #ffbf00 30%, #ad343e 30%, #ad343e 45%, #ffbf00 45%, #ffbf00 55%, #ad343e 55%, #ad343e 65%, #ffbf00 65%, #ffbf00 70%);
@@ -225,14 +220,6 @@ body {
 .gryffindor .avatar__tie:before {
   background: -o-linear-gradient(36deg, #ad343e 5%, #ffbf00 5%, #ffbf00 10%, #ad343e 10%, #ad343e 20%, #ffbf00 20%, #ffbf00 30%, #ad343e 30%, #ad343e 45%, #ffbf00 45%, #ffbf00 55%, #ad343e 55%, #ad343e 65%, #ffbf00 65%, #ffbf00 70%);
   background: linear-gradient(-306deg, #ad343e 5%, #ffbf00 5%, #ffbf00 10%, #ad343e 10%, #ad343e 20%, #ffbf00 20%, #ffbf00 30%, #ad343e 30%, #ad343e 45%, #ffbf00 45%, #ffbf00 55%, #ad343e 55%, #ad343e 65%, #ffbf00 65%, #ffbf00 70%);
-}
-
-.hufflepuff {
-  background: #eab000;
-}
-
-.hufflepuff .avatar__coat:before, .hufflepuff .avatar__coat:after {
-  background: #eab000;
 }
 
 .hufflepuff .avatar__tie {
@@ -245,14 +232,6 @@ body {
   background: linear-gradient(-306deg, #eab000 5%, #111 5%, #111 10%, #eab000 10%, #eab000 20%, #111 20%, #111 30%, #eab000 30%, #eab000 45%, #111 45%, #111 55%, #eab000 55%, #eab000 65%, #111 65%, #111 70%);
 }
 
-.ravenclaw {
-  background: #006daf;
-}
-
-.ravenclaw .avatar__coat:before, .ravenclaw .avatar__coat:after {
-  background: #006daf;
-}
-
 .ravenclaw .avatar__tie {
   background: -o-linear-gradient(144deg, #006daf 5%, #c0d8e0 5%, #c0d8e0 10%, #006daf 10%, #006daf 20%, #c0d8e0 20%, #c0d8e0 30%, #006daf 30%, #006daf 45%, #c0d8e0 45%, #c0d8e0 55%, #006daf 55%, #006daf 65%, #c0d8e0 65%, #c0d8e0 70%);
   background: linear-gradient(306deg, #006daf 5%, #c0d8e0 5%, #c0d8e0 10%, #006daf 10%, #006daf 20%, #c0d8e0 20%, #c0d8e0 30%, #006daf 30%, #006daf 45%, #c0d8e0 45%, #c0d8e0 55%, #006daf 55%, #006daf 65%, #c0d8e0 65%, #c0d8e0 70%);
@@ -261,14 +240,6 @@ body {
 .ravenclaw .avatar__tie:before {
   background: -o-linear-gradient(36deg, #006daf 5%, #c0d8e0 5%, #c0d8e0 10%, #006daf 10%, #006daf 20%, #c0d8e0 20%, #c0d8e0 30%, #006daf 30%, #006daf 45%, #c0d8e0 45%, #c0d8e0 55%, #006daf 55%, #006daf 65%, #c0d8e0 65%, #c0d8e0 70%);
   background: linear-gradient(-306deg, #006daf 5%, #c0d8e0 5%, #c0d8e0 10%, #006daf 10%, #006daf 20%, #c0d8e0 20%, #c0d8e0 30%, #006daf 30%, #006daf 45%, #c0d8e0 45%, #c0d8e0 55%, #006daf 55%, #006daf 65%, #c0d8e0 65%, #c0d8e0 70%);
-}
-
-.slytherin {
-  background: green;
-}
-
-.slytherin .avatar__coat:before, .slytherin .avatar__coat:after {
-  background: green;
 }
 
 .slytherin .avatar__tie {
@@ -303,13 +274,6 @@ body {
 .gryffindor .avatar-gender input:checked + label:after,
 .ravenclaw .avatar-gender input:checked + label:after {
   background: #fff;
-}
-
-.slytherin footer a,
-.gryffindor footer a,
-.ravenclaw footer a {
-  border: 1px dashed #fff;
-  color: #fff;
 }
 
 .avatar {
@@ -359,28 +323,28 @@ body {
   left: 30px;
 }
 
-.avatar__eyes.left.female::after {
-  content: "‿";
-  width: 5px;
+.avatar__eyes.left::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: antiquewhite;
   position: absolute;
-  color: #333;
-  left: -8px;
-  top: -24px;
-  font-size: 27px;
+  top: 5px;
 }
 
 .avatar__eyes.right {
   right: 30px;
 }
 
-.avatar__eyes.right.female::after {
-  content: "‿";
-  width: 5px;
+.avatar__eyes.right::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: antiquewhite;
   position: absolute;
-  color: #333;
-  left: 19px;
-  top: -25px;
-  font-size: 27px;
+  top: 5px;
 }
 
 .avatar__eyes:before {
@@ -533,7 +497,7 @@ body {
   margin: auto;
   left: 0;
   right: 0;
-  top: 95px;
+  top: 99px;
   border-radius: 50%;
 }
 
@@ -668,7 +632,7 @@ body {
 
 .sort-house {
   border: 3px solid;
-  margin: 40px auto 0;
+  margin: 20px auto 0;
   background: transparent;
   font: 35px "Lobster Two", cursive;
   padding: 8px 20px;
@@ -707,7 +671,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 300px;
-  margin: 3em auto 0;
+  margin: 2em auto 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -812,6 +776,307 @@ body {
 .sorting-hat.animate .sorting-hat__eye.right {
   -webkit-animation: eye-move-right 2.5s forwards 0.6s;
           animation: eye-move-right 2.5s forwards 0.6s;
+}
+
+/* animation ends */
+.main-content__wrapper {
+  background: url("../img/hogwarts.png");
+}
+
+#front-page-header {
+  background: left/cover no-repeat url("../img/films-desk.webp");
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#front-page-header h1 {
+  top: 1rem;
+  color: #f1c40f;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#front-page-header .title {
+  width: 400px;
+  top: 50%;
+  -webkit-filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+          filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+  top: 50%;
+  margin: 2rem auto;
+}
+
+#front-page-header .frontPageBadge {
+  width: 190px;
+  -webkit-animation: spinIn 2s both 1s;
+          animation: spinIn 2s both 1s;
+}
+
+#front-page-header .spell {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media screen and (max-width: 1220px) {
+  #front-page-header .spell {
+    display: none;
+  }
+}
+
+#front-page-header .quiz {
+  padding: 1.5rem;
+  background: #507eb1;
+  background: -o-linear-gradient(330deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+  background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+  border-radius: 10px;
+  color: #7F0909;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-animation: tada 2s timing-function delay iteration-count direction fill-mode;
+          animation: tada 2s timing-function delay iteration-count direction fill-mode;
+}
+
+#front-page-header .quiz:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#fp-main {
+  position: relative;
+}
+
+#fp-main h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+
+#fp-main .poem {
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#fp-main .poem.pull-left {
+  margin-left: auto;
+  padding-right: 5rem;
+}
+
+#fp-main .poem.pull-right {
+  right: 0;
+  margin-right: 2rem;
+  text-align: right;
+}
+
+.sorting-hat__answer.click-reminder::after {
+  content: 'Click to next scene.';
+  font-size: 14px;
+  -webkit-transform: skewX(-21deg);
+      -ms-transform: skewX(-21deg);
+          transform: skewX(-21deg);
+  position: absolute;
+  top: -8px;
+  right: -104px;
+  -webkit-animation: flip 1.5s 4s infinite both;
+          animation: flip 1.5s 4s infinite both;
+}
+
+/* keyframes */
+@-webkit-keyframes spinIn {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transform: rotateZ(0deg) scale3d(0, 0, 0);
+            transform: rotateZ(0deg) scale3d(0, 0, 0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: rotateZ(380deg) scale3d(1, 1, 1);
+            transform: rotateZ(380deg) scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) scale3d(1, 1, 1);
+            transform: rotateZ(360deg) scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+@keyframes spinIn {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    -webkit-transform: rotateZ(0deg) scale3d(0, 0, 0);
+            transform: rotateZ(0deg) scale3d(0, 0, 0);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: rotateZ(380deg) scale3d(1, 1, 1);
+            transform: rotateZ(380deg) scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) scale3d(1, 1, 1);
+            transform: rotateZ(360deg) scale3d(1, 1, 1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+@-webkit-keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-vertical {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
 }
 
 @-webkit-keyframes mouth-move {
@@ -992,263 +1257,6 @@ body {
   }
 }
 
-/* animation ends */
-.main-content__wrapper {
-  background: url("../img/hogwarts.png");
-}
-
-#front-page-header {
-  background: left/cover no-repeat url("../img/films-desk.webp");
-  height: 100vh;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-#front-page-header h1 {
-  top: 1rem;
-  color: #f1c40f;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-#front-page-header .title {
-  width: 400px;
-  top: 50%;
-  -webkit-filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
-          filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
-  top: 50%;
-  margin: 2rem auto;
-}
-
-#front-page-header .frontPageBadge {
-  width: 190px;
-}
-
-#front-page-header .sorting-hat-img {
-  position: absolute;
-  width: 200px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 10vw;
-  -webkit-animation: jello-vertical 1.5s both infinite;
-          animation: jello-vertical 1.5s both infinite;
-}
-
-#front-page-header .spell {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-@media screen and (max-width: 1220px) {
-  #front-page-header .spell {
-    display: none;
-  }
-}
-
-#front-page-header .quiz {
-  padding: 1.5rem;
-  background: #507eb1;
-  background: -o-linear-gradient(330deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
-  background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
-  border-radius: 10px;
-  color: #7F0909;
-  font-size: 16px;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  -o-transition: transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
-  -webkit-animation: tada 2s timing-function delay iteration-count direction fill-mode;
-          animation: tada 2s timing-function delay iteration-count direction fill-mode;
-}
-
-#front-page-header .quiz:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@-webkit-keyframes jello-vertical {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(0.85, 1.15, 1);
-            transform: scale3d(0.85, 1.15, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-            transform: scale3d(0.95, 1.05, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes jello-vertical {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(0.85, 1.15, 1);
-            transform: scale3d(0.85, 1.15, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-            transform: scale3d(0.95, 1.05, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-
-@-webkit-keyframes tada {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-  10%,
-  20% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-  }
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-  40%,
-  60%,
-  80% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes tada {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-  10%,
-  20% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-  }
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-  40%,
-  60%,
-  80% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
-  }
-}
-
-#fp-main {
-  position: relative;
-}
-
-#fp-main h2 {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
-}
-
-#fp-main .poem {
-  color: #ccc;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-#fp-main .poem.pull-left {
-  margin-left: auto;
-  padding-right: 5rem;
-}
-
-#fp-main .poem.pull-right {
-  right: 0;
-  margin-right: 2rem;
-  text-align: right;
-}
-
-.sorting-hat__answer.click-reminder::after {
-  content: 'Click to next scene.';
-  font-size: 14px;
-  -webkit-transform: skewX(-21deg);
-      -ms-transform: skewX(-21deg);
-          transform: skewX(-21deg);
-  position: absolute;
-  top: -8px;
-  right: -104px;
-  -webkit-animation: flip 1.5s 4s infinite both;
-          animation: flip 1.5s 4s infinite both;
-}
-
 @-webkit-keyframes flip {
   from {
     -webkit-transform: perspective(400px) rotateY(-360deg) scale3d(1, 1, 1);
@@ -1303,6 +1311,7 @@ body {
       grid-template-columns: 1fr 2.5fr;
   -ms-grid-rows: 100vh;
       grid-template-rows: 100vh;
+  position: relative;
 }
 
 #g-body .g-main .icon-wrapper {
@@ -1352,10 +1361,37 @@ body {
   grid-gap: 10px;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
   margin: 2rem 2rem 2rem 0;
 }
 
 #g-body .g-main .list-wrapper .role {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr (1fr)[4];
+      grid-template-rows: 2fr repeat(4, 1fr);
+  cursor: pointer;
+}
+
+#g-body .g-main .list-wrapper .role > * {
+  text-align: center;
+  place-self: center;
+}
+
+#g-body .g-main .list-wrapper .role > *:last-child {
+  margin-bottom: 1rem;
+}
+
+#g-body .g-main .module {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  background: white;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1363,16 +1399,55 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+#g-body .g-main .module .character-avatar {
+  width: 150px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#g-body .g-main .module .allInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60%;
+  font-size: 20px;
+}
+
+#g-body .g-main .module .module-close-btn {
+  width: 20px;
+  height: 20px;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.role {
+  background: #dbaf88;
 }
 
 .student {
   background: #AE2E23;
 }
 
-.staff {
+.professor {
   background: #22737F;
 }
 
@@ -1382,5 +1457,17 @@ body {
 
 .isUndefined {
   background: #32394B;
+}
+
+.headmaster {
+  background: #7F0909;
+}
+
+.auror {
+  background: #000A90;
+}
+
+.founder {
+  background: #0D6217;
 }
 /*# sourceMappingURL=style.css.map */

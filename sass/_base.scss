@@ -22,6 +22,10 @@ button:hover {
   cursor: pointer;
 }
 
+.hidden {
+  display: none !important;
+}
+
 $beige: rgb(230, 186, 147);
 $beige-tone: rgb(219, 175, 136);
 $brown-light: #cc8351;

@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 2.5fr;
     grid-template-rows: 100vh;
+    position: relative;
 
     .icon-wrapper {
       display: flex;
@@ -45,25 +46,82 @@
       display: grid;
       grid-gap: 10px;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: 200px;
       margin: 2rem 2rem 2rem 0;
 
       .role {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        display: grid;
+        grid-template-rows: 2fr repeat(4, 1fr);
+        cursor: pointer;
+
+        &>* {
+          text-align: center;
+          place-self: center;
+
+          &:last-child {
+            margin-bottom: 1rem;
+          }
+        }
       }
     }
 
+    .module {
+      position: fixed;
+      width: 70vw;
+      height: 70vh;
+      background: white;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+
+      .character-avatar {
+        width: 150px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      .allInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60%;
+        font-size: 20px;
+      }
+
+      .module-close-btn {
+        width: 20px;
+        height: 20px;
+        padding: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+
+
   }
+}
 
-
+.role {
+  background: $beige-tone;
 }
 
 .student {
   background: $student;
 }
 
-.staff {
+.professor {
   background: $staff;
 }
 
@@ -73,4 +131,16 @@
 
 .isUndefined {
   background: $undefined;
+}
+
+.headmaster {
+  background: $gryffindor-red;
+}
+
+.auror {
+  background: $ravenelaw-blue;
+}
+
+.founder {
+  background: $slytherin-green;
 }

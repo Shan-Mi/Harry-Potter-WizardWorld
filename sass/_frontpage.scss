@@ -30,13 +30,13 @@ body {
 }
 
 .gryffindor {
-  background: $red;
+  // background: $red;
 
   .avatar__coat {
 
     &:before,
     &:after {
-      background: $red;
+      // background: $red;
     }
   }
 
@@ -50,13 +50,13 @@ body {
 }
 
 .hufflepuff {
-  background: $yellow;
+  // background: $yellow;
 
   .avatar__coat {
 
     &:before,
     &:after {
-      background: $yellow;
+      // background: $yellow;
     }
   }
 
@@ -70,13 +70,13 @@ body {
 }
 
 .ravenclaw {
-  background: $blue;
+  // background: $blue;
 
   .avatar__coat {
 
     &:before,
     &:after {
-      background: $blue;
+      // background: $blue;
     }
   }
 
@@ -90,13 +90,13 @@ body {
 }
 
 .slytherin {
-  background: $green;
+  // background: $green;
 
   .avatar__coat {
 
     &:before,
     &:after {
-      background: $green;
+      // background: $green;
     }
   }
 
@@ -125,10 +125,10 @@ body {
     background: #fff;
   }
 
-  footer a {
-    border: 1px dashed #fff;
-    color: #fff;
-  }
+  // footer a {
+  //   border: 1px dashed #fff;
+  //   color: #fff;
+  // }
 }
 
 .avatar {
@@ -173,31 +173,49 @@ body {
     &.left {
       left: 30px;
 
-      &.female::after {
-        content: "‿";
-        width: 5px;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: antiquewhite;
         position: absolute;
-        color: #333;
-        left: -8px;
-        top: -24px;
-        font-size: 27px;
-
+        top: 5px;
       }
+
+      // &.female::after {
+      //   content: "‿";
+      //   width: 5px;
+      //   position: absolute;
+      //   color: #333;
+      //   left: -8px;
+      //   top: -24px;
+      //   font-size: 27px;
+      // }
     }
 
     &.right {
       right: 30px;
 
-      &.female::after {
-        content: "‿";
-        width: 5px;
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: antiquewhite;
         position: absolute;
-        color: #333;
-        left: 19px;
-        top: -25px;
-        font-size: 27px;
-
+        top: 5px;
       }
+
+      // &.female::after {
+      //   content: "‿";
+      //   width: 5px;
+      //   position: absolute;
+      //   color: #333;
+      //   left: 19px;
+      //   top: -25px;
+      //   font-size: 27px;
+      // }
     }
 
     &:before {
@@ -345,7 +363,7 @@ body {
     margin: auto;
     left: 0;
     right: 0;
-    top: 95px;
+    top: 99px;
     border-radius: 50%;
   }
 }
@@ -471,7 +489,8 @@ body {
 
 .sort-house {
   border: 3px solid;
-  margin: 40px auto 0;
+  // margin: 40px auto 0;
+  margin: 20px auto 0;
   background: transparent;
   font: 35px "Lobster Two", cursive;
   padding: 8px 20px;
@@ -512,7 +531,8 @@ body {
 .avatar-gender {
   display: flex;
   max-width: 300px;
-  margin: 3em auto 0;
+  // margin: 3em auto 0;
+  margin: 2em auto 0;
   align-items: center;
 
   >p,
@@ -606,6 +626,205 @@ body {
   }
 }
 
+
+
+/* animation ends */
+.main-content__wrapper {
+  background: url('../img/hogwarts.png');
+}
+
+#front-page-header {
+  background: left / cover no-repeat url('../img/films-desk.webp');
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h1 {
+    top: 1rem;
+    color: #f1c40f;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .title {
+    width: 400px;
+    top: 50%;
+    filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+    top: 50%;
+    margin: 2rem auto;
+  }
+
+  .frontPageBadge {
+    width: 190px;
+    animation: spinIn 2s both 1s;
+  }
+
+
+
+  // .sorting-hat-img {
+  //   position: absolute;
+  //   width: 200px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: 10vw;
+  //   animation: jello-vertical 1.5s both infinite;
+  // }
+
+  //need to change position when it comes to smaller screen
+  .spell {
+    order: 1;
+
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+  }
+
+  .quiz {
+    padding: 1.5rem;
+    background: rgb(80, 126, 177);
+    background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+    border-radius: 10px;
+    color: $gryffindor-red;
+    font-size: 16px;
+    transition: transform .3s;
+    animation: tada 2s timing-function delay iteration-count direction fill-mode;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+
+#fp-main {
+  position: relative;
+
+  h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .poem {
+    color: $silver;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.pull-left {
+      margin-left: auto;
+      padding-right: 5rem;
+    }
+
+    &.pull-right {
+      right: 0;
+      margin-right: 2rem;
+      text-align: right;
+    }
+  }
+}
+
+.sorting-hat__answer.click-reminder {
+  &::after {
+    content: 'Click to next scene.';
+    font-size: 14px;
+    transform: skewX(-21deg);
+    position: absolute;
+    top: -8px;
+    right: -104px;
+    animation: flip 1.5s 4s infinite both;
+  }
+}
+
+/* keyframes */
+@keyframes spinIn {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    transform: rotateZ(0deg) scale3d(0, 0, 0);
+    transform-origin: center center
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  70% {
+    transform: rotateZ(380deg) scale3d(1, 1, 1);
+    transform-origin: center center
+  }
+
+  100% {
+    transform: rotateZ(360deg) scale3d(1, 1, 1);
+    transform-origin: center center
+  }
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @keyframes mouth-move {
   0% {
     height: 20px;
@@ -693,174 +912,6 @@ body {
 
   80% {
     transform: rotate(-45deg) scaleX(-1);
-  }
-}
-
-/* animation ends */
-.main-content__wrapper {
-  background: url('../img/hogwarts.png');
-}
-
-#front-page-header {
-  background: left / cover no-repeat url('../img/films-desk.webp');
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  h1 {
-    top: 1rem;
-    color: #f1c40f;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .title {
-    width: 400px;
-    top: 50%;
-    filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
-    top: 50%;
-    margin: 2rem auto;
-  }
-
-  .frontPageBadge {
-    width: 190px;
-  }
-
-  .sorting-hat-img {
-    position: absolute;
-    width: 200px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10vw;
-    animation: jello-vertical 1.5s both infinite;
-  }
-
-  //need to change position when it comes to smaller screen
-  .spell {
-    order: 1;
-
-    @media screen and (max-width: 1220px) {
-      display: none;
-    }
-  }
-
-  .quiz {
-    padding: 1.5rem;
-    background: rgb(80, 126, 177);
-    background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
-    border-radius: 10px;
-    color: $gryffindor-red;
-    font-size: 16px;
-    transition: transform .3s;
-    animation: tada 2s timing-function delay iteration-count direction fill-mode;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}
-
-@keyframes jello-vertical {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-
-  40% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-
-  50% {
-    transform: scale3d(0.85, 1.15, 1);
-  }
-
-  65% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-
-  75% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes tada {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  10%,
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-  }
-
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-
-  40%,
-  60%,
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-#fp-main {
-  position: relative;
-
-  h2 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
-
-  .poem {
-    color: $silver;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &.pull-left {
-      margin-left: auto;
-      padding-right: 5rem;
-    }
-
-    &.pull-right {
-      right: 0;
-      margin-right: 2rem;
-      text-align: right;
-    }
-  }
-}
-
-.sorting-hat__answer.click-reminder {
-  &::after {
-    content: 'Click to next scene.';
-    font-size: 14px;
-    transform: skewX(-21deg);
-    position: absolute;
-    top: -8px;
-    right: -104px;
-    animation: flip 1.5s 4s infinite both;
   }
 }
 
