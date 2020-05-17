@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 $beige: rgb(230, 186, 147);
 $beige-tone: rgb(219, 175, 136);
 $brown-light: #cc8351;

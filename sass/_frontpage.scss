@@ -3,30 +3,6 @@ body {
   font-family: "Comfortaa", sans-serif;
 }
 
-aside.context {
-  text-align: center;
-  color: #333;
-  line-height: 1.7;
-
-  a {
-    text-decoration: none;
-    color: #333;
-    padding: 3px 0;
-    border-bottom: 1px dashed;
-
-    &:hover {
-      border-bottom: 1px solid;
-    }
-  }
-
-  .explanation {
-    max-width: 700px;
-    margin: 6em auto 0;
-  }
-}
-
-
-
 .main-content__wrapper {
   text-align: center;
   padding: 2em;
@@ -735,7 +711,6 @@ aside.context {
   justify-content: space-evenly;
 
   h1 {
-
     top: 1rem;
     color: #f1c40f;
     text-align: center;
@@ -874,5 +849,34 @@ aside.context {
       margin-right: 2rem;
       text-align: right;
     }
+  }
+}
+
+.sorting-hat__answer.click-reminder {
+  &::after {
+    content: 'Click to next scene.';
+    font-size: 14px;
+    transform: skewX(-21deg);
+    position: absolute;
+    top: -8px;
+    right: -104px;
+    animation: flip 1.5s 4s infinite both;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotateY(-360deg) scale3d(1, 1, 1);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  }
+
+  50% {
+    transform: perspective(400px) rotateY(-180deg) scale3d(1.2, 1.2, 1.2);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  }
+
+  to {
+    transform: perspective(400px) rotateY(0deg) scale3d(1, 1, 1);
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035)
   }
 }

@@ -24,6 +24,11 @@ sortMeBtn.addEventListener('click', () => {
   let item = houses[Math.floor(Math.random() * houses.length)]
   jumpToAnswerLink.setAttribute('href', `${item}.html`)
 
+  sortingHatAnswer.classList.add('click-reminder')
+  setTimeout(() => {
+    sortingHatAnswer.classList.remove('click-reminder')
+  }, 6500)
+
   setTimeout(function () {
     sortingHat.classList.add('animate')
     sortingHatAnswer.textContent = `${item} !`
