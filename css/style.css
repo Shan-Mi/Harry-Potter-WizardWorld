@@ -1383,7 +1383,7 @@ body {
 }
 
 #g-body .g-main .module {
-  position: absolute;
+  position: fixed;
   width: 70vw;
   height: 70vh;
   background: white;
