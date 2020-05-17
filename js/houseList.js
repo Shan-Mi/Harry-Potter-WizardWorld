@@ -36,7 +36,7 @@ const loadHouse = async () => {
   try {
     const res = await fetch(url);
     characters = await res.json();
-    const charactersLength = characters.length
+    // const charactersLength = characters.length
     displayList(characters);
   } catch (err) {
     console.error(err);
