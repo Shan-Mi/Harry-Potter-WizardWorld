@@ -25,8 +25,8 @@ const getOneRandomSpell = async () => {
   try {
     const res = await fetch(url);
     spells = await res.json();
-    // console.log(spells)
-    let spellNumber = Math.floor(Math.random() * 151)
+    const spellLength = spells.length
+    let spellNumber = Math.floor(Math.random() * spellLength)
     let spell = spells[spellNumber]
     console.log(spell)
     displaySpell(spell);
@@ -34,7 +34,6 @@ const getOneRandomSpell = async () => {
     console.error(err);
   }
 };
-
 
 const displaySpell = (spell) => {
   const htmlString = `

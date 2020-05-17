@@ -12,6 +12,7 @@
 
 html {
   font-family: 'Lobster Two', cursive;
+  overflow-x: hidden;
 }
 
 a {
@@ -1292,6 +1293,7 @@ body {
 
 #g-body {
   background: url("/img/hogwarts.png");
+  background-attachment: fixed;
 }
 
 #g-body .g-main {
@@ -1345,6 +1347,15 @@ body {
 }
 
 #g-body .g-main .list-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 2rem 2rem 2rem 0;
+}
+
+#g-body .g-main .list-wrapper .role {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1357,11 +1368,19 @@ body {
           align-items: center;
 }
 
-#g-body .g-main .list-wrapper .role-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+.student {
+  background: #AE2E23;
+}
+
+.staff {
+  background: #22737F;
+}
+
+.ghost {
+  background: #D7CDD2;
+}
+
+.isUndefined {
+  background: #32394B;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@
 
 html {
   font-family: 'Lobster Two', cursive;
+  overflow-x: hidden;
 }
 
 a {
@@ -46,3 +47,8 @@ $hufflepuff-yellow: #EEE117;
 $hufflepuff-black: #000;
 $slytherin-green: #0D6217;
 $slytherin-grey: #AAA;
+
+$student:#AE2E23;
+$staff: #22737F;
+$ghost: #D7CDD2;
+$undefined: #32394B;
