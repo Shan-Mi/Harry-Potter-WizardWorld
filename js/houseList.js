@@ -3,10 +3,8 @@ const key = '$2a$10$tE9Q/PpSuP7rQLFkrB2IOOcl.0ptM34qLwotYCBjL/p9DIL.o4pMK';
 let houseName = ''
 
 function checkName() {
-  console.log('this is ')
   if (/gryffindor/.test(location.href)) {
     houseName = "Gryffindor"
-    console.log('gryffindor')
     return
   }
   if (/hufflepuff/.test(location.href)) {
@@ -24,36 +22,17 @@ function checkName() {
 }
 checkName()
 
-
 const url = new URL('https://www.potterapi.com/v1/characters/'),
   params = {
     key: key,
     house: houseName //41
   }
 
-// const urlHufflepuff = new URL('https://www.potterapi.com/v1/characters/'),
-//   params = {
-//     key: key,
-//     house: "Hufflepuff" //13
-//   }
-
-// const urlRavenclaw = new URL('https://www.potterapi.com/v1/characters/'),
-//   params = {
-//     key: key,
-//     house: "Ravenclaw" //17
-//   }
-
-// const urlSlytherin = new URL('https://www.potterapi.com/v1/characters/'),
-//   params = {
-//     key: key,
-//     house: "Slytherin" //23
-//   }
-
 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
 const listWrapperArea = document.querySelector('.list-wrapper')
 
-const loadGryffindor = async () => {
+const loadHouse = async () => {
   try {
     const res = await fetch(url);
     characters = await res.json();
@@ -93,4 +72,5 @@ const displayList = (characters) => {
     .join('');
   listWrapperArea.innerHTML = htmlString;
 }
-loadGryffindor()
+
+loadHouse()
