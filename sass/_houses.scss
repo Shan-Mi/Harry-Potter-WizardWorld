@@ -5,38 +5,43 @@
   .g-main {
     display: grid;
     grid-template-columns: 1fr 2.5fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: max-content;
     position: relative;
 
-    .icon-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
+    .sticky-wrapper {
+      position: relative;
 
-      .big-icon {
-        .icon.big {
-          width: 200px;
-        }
-      }
-
-      .search-box {
-        width: 260px;
-        padding: 20px 35px;
-        border: 1px solid white;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      .small-icon-wrapper {
+      .icon-wrapper {
         display: flex;
-        // align-content: space-between;
-        width: 100%;
-        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
 
-        .small-icon {
-          .icon.small {
-            width: 80px;
+        .big-icon {
+          .icon.big {
+            width: 200px;
+          }
+        }
+
+        .search-box {
+          width: 260px;
+          padding: 20px 35px;
+          border: 1px solid white;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+
+        .small-icon-wrapper {
+          display: flex;
+          // align-content: space-between;
+          width: 100%;
+          justify-content: space-evenly;
+
+          .small-icon {
+            .icon.small {
+              width: 80px;
+            }
           }
         }
       }
@@ -184,4 +189,13 @@
 .founder {
   background: $slytherin-green;
   color: #e1d4c5;
+}
+
+.sticky-wrapper {
+  position: relative;
+
+  .icon-wrapper {
+    position: sticky;
+    top: 1rem;
+  }
 }

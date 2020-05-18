@@ -1309,12 +1309,17 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 2.5fr;
       grid-template-columns: 1fr 2.5fr;
-  -ms-grid-rows: 100vh;
-      grid-template-rows: 100vh;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
   position: relative;
 }
 
-#g-body .g-main .icon-wrapper {
+#g-body .g-main .sticky-wrapper {
+  position: relative;
+}
+
+#g-body .g-main .sticky-wrapper .icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1327,13 +1332,14 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  height: 100vh;
 }
 
-#g-body .g-main .icon-wrapper .big-icon .icon.big {
+#g-body .g-main .sticky-wrapper .icon-wrapper .big-icon .icon.big {
   width: 200px;
 }
 
-#g-body .g-main .icon-wrapper .search-box {
+#g-body .g-main .sticky-wrapper .icon-wrapper .search-box {
   width: 260px;
   padding: 20px 35px;
   border: 1px solid white;
@@ -1341,7 +1347,7 @@ body {
   font-size: 16px;
 }
 
-#g-body .g-main .icon-wrapper .small-icon-wrapper {
+#g-body .g-main .sticky-wrapper .icon-wrapper .small-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1351,7 +1357,7 @@ body {
           justify-content: space-evenly;
 }
 
-#g-body .g-main .icon-wrapper .small-icon-wrapper .small-icon .icon.small {
+#g-body .g-main .sticky-wrapper .icon-wrapper .small-icon-wrapper .small-icon .icon.small {
   width: 80px;
 }
 
@@ -1518,5 +1524,15 @@ body {
 .founder {
   background: #0D6217;
   color: #e1d4c5;
+}
+
+.sticky-wrapper {
+  position: relative;
+}
+
+.sticky-wrapper .icon-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
