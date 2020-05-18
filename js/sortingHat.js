@@ -57,5 +57,12 @@ genderSelectors.forEach(genderSelector => {
 
 const sortingHatAnchor = document.querySelector('#sorting-hat-anchor')
 setTimeout(function () {
-  sortingHatAnchor.scrollIntoView();
+  sortingHatAnchor.scrollIntoView({
+    behavior: "smooth"
+  });
 }, 4000) //after 4 seconds, meet the sorting hat
+
+const goToSpellBtn = document.querySelector('.go-to-spell')
+goToSpellBtn.addEventListener('click', () => {
+  window.location = 'spell.html'
+})

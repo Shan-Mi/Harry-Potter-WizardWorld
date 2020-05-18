@@ -166,9 +166,14 @@
 
         .wand-img {
           position: absolute;
-          width: 11rem;
-          bottom: 4rem;
-          right: 4rem;
+          /* For big screen */
+          // width: 11rem;
+          // bottom: 4rem;
+          // right: 4rem;
+          /* For laptop */
+          width: 5vw;
+          bottom: 2rem;
+          left: 2rem;
         }
       }
 
@@ -291,15 +296,17 @@
   }
 }
 
-.close-wand-animation {
-  width: 3rem;
-  &:hover{
-    transform: scale(1.1);
-    transition: transform 0.6s;
-    cursor: pointer;
-  }
-  &+span{
-    position: absolute;
-    top: 40%;
-  }
-}
+// .close-wand-animation {
+//   width: 3rem;
+
+//   &:hover {
+//     transform: scale(1.1);
+//     transition: transform 0.6s;
+//     cursor: pointer;
+//   }
+
+//   &+span {
+//     position: absolute;
+//     top: 40%;
+//   }
+// }
