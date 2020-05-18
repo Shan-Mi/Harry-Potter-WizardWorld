@@ -125,10 +125,6 @@ body {
     background: #fff;
   }
 
-  // footer a {
-  //   border: 1px dashed #fff;
-  //   color: #fff;
-  // }
 }
 
 .avatar {
@@ -196,6 +192,7 @@ body {
 
     &.right {
       right: 30px;
+      top: 5.9rem;
 
       &::after {
         content: "";
@@ -205,6 +202,7 @@ body {
         background: antiquewhite;
         position: absolute;
         top: 5px;
+        left: 20px;
       }
 
       // &.female::after {
@@ -246,6 +244,7 @@ body {
       right: -15px;
       left: auto;
       border-radius: 50% 100% 100% 50%;
+      top: 5.6rem;
     }
   }
 
@@ -326,7 +325,6 @@ body {
     height: 70px;
     background: #f9f9f9;
     margin: auto;
-    //background: linear-gradient(to bottom, var(--color), var(--color2));
     border-radius: 70% 80% 80% 70%/25% 25% 130% 130%;
     position: relative;
     z-index: 2;
@@ -370,7 +368,6 @@ body {
 
 .sorting-hat {
   position: relative;
-  // height: 300px;
   height: 15rem;
 
   &__top {
@@ -489,20 +486,18 @@ body {
 
 .sort-house {
   border: 3px solid;
-  // margin: 40px auto 0;
   margin: 20px auto 0;
   background: transparent;
   font: 35px "Lobster Two", cursive;
   padding: 8px 20px;
   cursor: pointer;
-  // width: 180px;
   width: 186px;
   position: relative;
+  border-radius: 0;
 
   &:before {
     content: "";
     position: absolute;
-    // width: 166px;
     width: 176px;
     height: 56px;
     left: 2px;
@@ -511,15 +506,17 @@ body {
   }
 
   &:hover {
+    background: transparent;
+    color: white;
+
     &:before {
-      // width: 100%;
       width: 102%;
-      // height: 100%;
       height: 107%;
       transition: 0.3s ease;
       left: -2px;
       top: -2px;
       right: auto;
+      color: white;
     }
   }
 
@@ -531,13 +528,13 @@ body {
 .avatar-gender {
   display: flex;
   max-width: 300px;
-  // margin: 3em auto 0;
   margin: 2em auto 0;
   align-items: center;
 
   >p,
   div {
     flex: auto;
+    color: white;
   }
 
   p {
@@ -546,6 +543,7 @@ body {
 
   input {
     opacity: 0;
+    color: white;
 
     &:checked+label:after {
       content: '';
@@ -554,7 +552,7 @@ body {
       height: 12px;
       top: 7px;
       left: -18px;
-      background: #000;
+      background: #ccc;
       border-radius: 50%;
     }
   }
@@ -661,17 +659,6 @@ body {
     width: 190px;
     animation: spinIn 2s both 1s;
   }
-
-
-
-  // .sorting-hat-img {
-  //   position: absolute;
-  //   width: 200px;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   left: 10vw;
-  //   animation: jello-vertical 1.5s both infinite;
-  // }
 
   //need to change position when it comes to smaller screen
   .spell {

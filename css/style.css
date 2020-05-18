@@ -335,6 +335,7 @@ body {
 
 .avatar__eyes.right {
   right: 30px;
+  top: 5.9rem;
 }
 
 .avatar__eyes.right::after {
@@ -345,6 +346,7 @@ body {
   background: antiquewhite;
   position: absolute;
   top: 5px;
+  left: 20px;
 }
 
 .avatar__eyes:before {
@@ -376,6 +378,7 @@ body {
   right: -15px;
   left: auto;
   border-radius: 50% 100% 100% 50%;
+  top: 5.6rem;
 }
 
 .avatar__hair {
@@ -639,6 +642,7 @@ body {
   cursor: pointer;
   width: 186px;
   position: relative;
+  border-radius: 0;
 }
 
 .sort-house:before {
@@ -651,6 +655,11 @@ body {
   border: 2px solid;
 }
 
+.sort-house:hover {
+  background: transparent;
+  color: white;
+}
+
 .sort-house:hover:before {
   width: 102%;
   height: 107%;
@@ -660,6 +669,7 @@ body {
   left: -2px;
   top: -2px;
   right: auto;
+  color: white;
 }
 
 .sort-house:focus {
@@ -682,6 +692,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  color: white;
 }
 
 .avatar-gender p {
@@ -690,6 +701,7 @@ body {
 
 .avatar-gender input {
   opacity: 0;
+  color: white;
 }
 
 .avatar-gender input:checked + label:after {
@@ -699,7 +711,7 @@ body {
   height: 12px;
   top: 7px;
   left: -18px;
-  background: #000;
+  background: #ccc;
   border-radius: 50%;
 }
 
@@ -1534,6 +1546,13 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 1rem;
+}
+
+.overlay-blur {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #form {

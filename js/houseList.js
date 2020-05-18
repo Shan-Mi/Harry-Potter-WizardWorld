@@ -25,7 +25,7 @@ checkName()
 const url = new URL('https://www.potterapi.com/v1/characters/'),
   params = {
     key: key,
-    house: houseName //41
+    house: houseName
   }
 
 Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
@@ -110,8 +110,10 @@ listWrapperArea.addEventListener('click', (e) => {
     // console.log(getResult)
     const moduleArea = document.querySelector('.module')
     moduleArea.classList.remove('hidden')
+    const overlay = document.querySelector('.overlay-blur')
+    overlay.classList.remove('hidden')
     moduleArea.innerHTML = `
-      <img src="img/character/${getResult[0].name}.webp" alt="" class="character-avatar">
+      <img src="img/character/${getResult[0].name.replace(/\s$/, '')}.webp" alt="${getResult[0].name.replace(/\s$/, '')} image" class="character-avatar">
       <div class="allInfo">
         <h2 class="name">${getResult[0].name}</h3>
         <p class="bloodStatus"><span class='title'>Blood Status:</span> ${getResult[0].bloodStatus}</p>
@@ -128,11 +130,16 @@ listWrapperArea.addEventListener('click', (e) => {
     `
     moduleArea.addEventListener('click', (e) => {
       if (e.target.matches(".module-close-btn")) {
-        console.log('this is close button')
         moduleArea.classList.add('hidden')
         moduleArea.innerHTML = ''
+        overlay.classList.add('hidden')
       }
     })
 
+    overlay.addEventListener('click', () => {
+      moduleArea.classList.add('hidden')
+      moduleArea.innerHTML = ''
+      overlay.classList.add('hidden')
+    })
   }
 })
