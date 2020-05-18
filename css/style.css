@@ -1351,6 +1351,42 @@ body {
   width: 200px;
 }
 
+#g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  position: relative;
+  width: 100%;
+}
+
+#g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp::before {
+  content: 'Go back to frontpage';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp .go-to-fp-img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+#g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp .go-to-fp-img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+
 #g-body .g-main .sticky-wrapper .icon-wrapper .search-box {
   width: 260px;
   padding: 20px 35px;

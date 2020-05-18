@@ -24,6 +24,32 @@
           }
         }
 
+        .go-to-fp {
+          order: 1;
+          position: relative;
+          width: 100%;
+
+          &::before {
+            content: 'Go back to frontpage';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          .go-to-fp-img {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+
+            &:hover {
+              transform: scale(1.1);
+              filter: invert(100%);
+              transition: filter 0.3s;
+            }
+          }
+        }
+
+
         .search-box {
           width: 260px;
           padding: 20px 35px;
