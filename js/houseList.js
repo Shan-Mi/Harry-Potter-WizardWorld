@@ -108,10 +108,19 @@ listWrapperArea.addEventListener('click', (e) => {
       character.name.includes(getName)
     )
     // console.log(getResult)
+    let wand
+    let isThereAWand
     const moduleArea = document.querySelector('.module')
     moduleArea.classList.remove('hidden')
     const overlay = document.querySelector('.overlay-blur')
     overlay.classList.remove('hidden')
+    if(getResult[0].hasOwnProperty('wand')){
+      wand = getResult[0].wand
+      isThereAWand = ""
+    }else{
+      wand = ''
+      isThereAWand = 'hidden'
+    }
     moduleArea.innerHTML = `
       <img src="img/character/${getResult[0].name.replace(/\s$/, '')}.webp" alt="${getResult[0].name.replace(/\s$/, '')} image" class="character-avatar">
       <div class="allInfo">
@@ -125,6 +134,8 @@ listWrapperArea.addEventListener('click', (e) => {
         <p class="charactor-role"><span class='title'>Role:</span> ${getResult[0].role}</p>
         <p class="school"><span class='title'>School:</span> ${getResult[0].school}</p>
         <p class="species"><span class='title'>Species:</span> ${getResult[0].species}</p>
+        <p class="wand ${isThereAWand}"><span class='title'>Wand: </span>${wand}</p>
+        <img class="wand-img ${isThereAWand}" src="img/wand/${getResult[0].name}_wand.webp" alt="${getResult[0].name}'s wand">
       </div>
       <div><img class="module-close-btn" src="img/close.svg" alt="close sign"></div>
     `

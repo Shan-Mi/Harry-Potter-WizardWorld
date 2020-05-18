@@ -1519,6 +1519,13 @@ body {
   display: inline-block;
 }
 
+#g-body .g-main .module .allInfo .wand-img {
+  position: absolute;
+  width: 11rem;
+  bottom: 4rem;
+  right: 4rem;
+}
+
 #g-body .g-main .module .module-close-btn {
   width: 50px;
   margin-bottom: -20px;
