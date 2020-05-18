@@ -34,10 +34,11 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            top: -2.5rem
           }
 
           .go-to-fp-img {
-            width: 200px;
+            width: 135px;
             display: block;
             margin: 0 auto;
 
@@ -48,7 +49,6 @@
             }
           }
         }
-
 
         .search-box {
           width: 260px;
@@ -238,4 +238,68 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
+}
+
+.hasWand {
+  position: relative;
+
+  &::before {
+    content: url(../img/wand.svg);
+    filter: invert(94%) sepia(15%) saturate(334%) hue-rotate(190deg) brightness(103%) contrast(96%);
+    width: 30px;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    // transform: rotate(-416deg);
+    animation: wobble-vertical 2s linear infinite;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+
+  // &::after {
+  //   content: url(../img/lightning.gif);
+  //   width: 30px;
+  //   position: absolute;
+  //   left: 61px;
+  //   bottom: 48px;
+  // }
+}
+
+
+@keyframes wobble-vertical {
+  16.65% {
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    transform: translateY(1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.close-wand-animation {
+  width: 3rem;
+  &:hover{
+    transform: scale(1.1);
+    transition: transform 0.6s;
+    cursor: pointer;
+  }
+  &+span{
+    position: absolute;
+    top: 40%;
+  }
 }

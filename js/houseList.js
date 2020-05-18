@@ -51,6 +51,7 @@ const displayList = (characters) => {
       charactersList.push(character)
       let roleColor = ''
       let role = character.role
+      let hasAWand
       // console.log(character.role)
 
       if (/student/i.test(role)) {
@@ -72,8 +73,10 @@ const displayList = (characters) => {
         roleColor = 'founder'
       }
 
-      return `
-        <div class="role ${roleColor}" data-name="${character.name}">
+      character.hasOwnProperty('wand') ? hasAWand = 'hasWand' : hasAWand = ''
+
+        return `
+        <div class="role ${roleColor} ${hasAWand}" data-name="${character.name}">
           <h3 class="name">${character.name}</h3>
           <p class="detailed-role">${character.role}</p>
           <p class="bloodStatus">${character.bloodStatus}</p>
@@ -114,10 +117,10 @@ listWrapperArea.addEventListener('click', (e) => {
     moduleArea.classList.remove('hidden')
     const overlay = document.querySelector('.overlay-blur')
     overlay.classList.remove('hidden')
-    if(getResult[0].hasOwnProperty('wand')){
+    if (getResult[0].hasOwnProperty('wand')) {
       wand = getResult[0].wand
       isThereAWand = ""
-    }else{
+    } else {
       wand = ''
       isThereAWand = 'hidden'
     }
@@ -154,3 +157,8 @@ listWrapperArea.addEventListener('click', (e) => {
     })
   }
 })
+
+// const closeAnimationBtn = document.querySelector('.close-wand-animation')
+// closeAnimationBtn.addEventListener('click', ()=>{
+
+// })

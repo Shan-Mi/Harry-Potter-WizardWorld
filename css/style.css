@@ -1366,10 +1366,11 @@ body {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  top: -2.5rem;
 }
 
 #g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp .go-to-fp-img {
-  width: 200px;
+  width: 135px;
   display: block;
   margin: 0 auto;
 }
@@ -1596,6 +1597,97 @@ body {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
+}
+
+.hasWand {
+  position: relative;
+}
+
+.hasWand::before {
+  content: url(../img/wand.svg);
+  -webkit-filter: invert(94%) sepia(15%) saturate(334%) hue-rotate(190deg) brightness(103%) contrast(96%);
+          filter: invert(94%) sepia(15%) saturate(334%) hue-rotate(190deg) brightness(103%) contrast(96%);
+  width: 30px;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  -webkit-animation: wobble-vertical 2s linear infinite;
+          animation: wobble-vertical 2s linear infinite;
+}
+
+@-webkit-keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.close-wand-animation {
+  width: 3rem;
+}
+
+.close-wand-animation:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  cursor: pointer;
+}
+
+.close-wand-animation + span {
+  position: absolute;
+  top: 40%;
 }
 
 #form {
