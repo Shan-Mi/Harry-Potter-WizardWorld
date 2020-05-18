@@ -104,7 +104,7 @@ searchArea.addEventListener('keyup', (e) => {
 listWrapperArea.addEventListener('click', (e) => {
   if (e.target.matches('.role')) {
     const getName = e.target.dataset.name
-    const getResult = charactersList.filter(character => 
+    const getResult = charactersList.filter(character =>
       character.name.includes(getName)
     )
     // console.log(getResult)
@@ -113,22 +113,22 @@ listWrapperArea.addEventListener('click', (e) => {
     moduleArea.innerHTML = `
       <img src="img/character/${getResult[0].name}.webp" alt="" class="character-avatar">
       <div class="allInfo">
-        <p class="bloodStatus">${getResult[0].bloodStatus}</p>
-        <p class="deathEater">${getResult[0].deathEater}</p>
-        <p class="dumbeldoresArmy">${getResult[0].dumbledoresArmy}</p>
-        <p class="house">${getResult[0].house}</p>
-        <p class="ministryOfMagic">${getResult[0].ministryOfMagic}</p>
-        <p class="name">${getResult[0].name}</p>
-        <p class="orderOfThePhoenix">${getResult[0].orderOfThePhoenix}</p>
-        <p class="charactor-role">${getResult[0].role}</p>
-        <p class="school">${getResult[0].school}</p>
-        <p class="species">${getResult[0].species}</p>
+        <h2 class="name">${getResult[0].name}</h3>
+        <p class="bloodStatus"><span class='title'>Blood Status:</span> ${getResult[0].bloodStatus}</p>
+        <p class="deathEater"><span class='title'>Death Easter:</span> ${getResult[0].deathEater}</p>
+        <p class="dumbeldoresArmy"><span class='title'>Dumbeldore's Army:</span> ${getResult[0].dumbledoresArmy}</p>
+        <p class="house"><span class='title'>House:</span> ${getResult[0].house}</p>
+        <p class="ministryOfMagic"><span class='title'>Ministry Of Magic:</span> ${getResult[0].ministryOfMagic}</p>
+        <p class="orderOfThePhoenix"><span class='title'>Order Of The Phoenix:</span> ${getResult[0].orderOfThePhoenix}</p>
+        <p class="charactor-role"><span class='title'>Role:</span> ${getResult[0].role}</p>
+        <p class="school"><span class='title'>School:</span> ${getResult[0].school}</p>
+        <p class="species"><span class='title'>Species:</span> ${getResult[0].species}</p>
       </div>
-      <button class="module-close-btn">X</button>
+      <div><img class="module-close-btn" src="img/close.svg" alt="close sign"></div>
     `
-    moduleArea.addEventListener('click', (e)=>{
-      if(e.target.matches("button")){
-        // console.log('this is close button')
+    moduleArea.addEventListener('click', (e) => {
+      if (e.target.matches(".module-close-btn")) {
+        console.log('this is close button')
         moduleArea.classList.add('hidden')
         moduleArea.innerHTML = ''
       }

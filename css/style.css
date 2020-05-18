@@ -1403,13 +1403,22 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+  background-color: black;
+  background-image: -o-radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), -o-radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), -o-radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), -o-radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  outline: 2px solid aliceblue;
+  outline-offset: -18px;
+  border: 2px solid #1e6aac;
+  border-radius: 3px;
 }
 
 #g-body .g-main .module .character-avatar {
-  width: 150px;
+  width: 15vw;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 4rem;
+  top: 4rem;
 }
 
 #g-body .g-main .module .allInfo {
@@ -1425,18 +1434,52 @@ body {
           justify-content: space-between;
   height: 60%;
   font-size: 20px;
+  text-align: left;
+  margin: 2vh 5vw;
+  color: #c1cab0;
+}
+
+#g-body .g-main .module .allInfo > * {
+  margin-top: .5rem;
+}
+
+#g-body .g-main .module .allInfo p {
+  text-indent: 50px;
+}
+
+#g-body .g-main .module .allInfo p:first-of-type {
+  margin-top: 1rem;
+}
+
+#g-body .g-main .module .allInfo .name {
+  margin-top: -20px;
+}
+
+#g-body .g-main .module .allInfo span.title {
+  font-weight: bold;
+}
+
+#g-body .g-main .module .allInfo span.title::after {
+  content: "";
+  width: 10px;
+  display: inline-block;
 }
 
 #g-body .g-main .module .module-close-btn {
-  width: 20px;
-  height: 20px;
-  padding: 30px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 50px;
+  margin-bottom: -20px;
+  cursor: pointer;
+}
+
+#g-body .g-main .module .module-close-btn:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .role {
@@ -1445,10 +1488,12 @@ body {
 
 .student {
   background: #AE2E23;
+  color: #e3e3e3;
 }
 
 .professor {
   background: #22737F;
+  color: #edf2f7;
 }
 
 .ghost {
@@ -1457,17 +1502,21 @@ body {
 
 .isUndefined {
   background: #32394B;
+  color: #ccc;
 }
 
 .headmaster {
   background: #7F0909;
+  color: #e3b568;
 }
 
 .auror {
   background: #000A90;
+  color: #ccc;
 }
 
 .founder {
   background: #0D6217;
+  color: #e1d4c5;
 }
 /*# sourceMappingURL=style.css.map */

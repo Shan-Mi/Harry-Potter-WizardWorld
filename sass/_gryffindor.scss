@@ -50,10 +50,6 @@
       margin: 2rem 2rem 2rem 0;
 
       .role {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
         display: grid;
         grid-template-rows: 2fr repeat(4, 1fr);
         cursor: pointer;
@@ -81,12 +77,24 @@
       flex-direction: column;
       justify-content: space-evenly;
       text-align: center;
+      background-color: black;
+      background-image:
+        radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+        radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+      background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+      background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+      outline: 2px solid aliceblue;
+      outline-offset: -18px;
+      border: 2px solid #1e6aac;
+      border-radius: 3px;
 
       .character-avatar {
-        width: 150px;
+        width: 15vw;
         position: absolute;
-        right: 10px;
-        top: 10px;
+        right: 4rem;
+        top: 4rem;
       }
 
       .allInfo {
@@ -95,21 +103,48 @@
         justify-content: space-between;
         height: 60%;
         font-size: 20px;
+        text-align: left;
+        margin: 2vh 5vw;
+        color: #c1cab0;
+
+        &>* {
+          margin-top: .5rem;
+        }
+
+        p {
+          text-indent: 50px;
+
+          &:first-of-type {
+            margin-top: 1rem;
+          }
+        }
+
+        .name {
+          margin-top: -20px;
+        }
+
+        span.title {
+          font-weight: bold;
+
+          &::after {
+            content: "";
+            width: 10px;
+            display: inline-block;
+          }
+        }
       }
 
       .module-close-btn {
-        width: 20px;
-        height: 20px;
-        padding: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 50px;
+        margin-bottom: -20px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s;
+        }
       }
     }
-
-
-
   }
 }
 
@@ -119,10 +154,12 @@
 
 .student {
   background: $student;
+  color: #e3e3e3;
 }
 
 .professor {
   background: $staff;
+  color: #edf2f7;
 }
 
 .ghost {
@@ -131,16 +168,20 @@
 
 .isUndefined {
   background: $undefined;
+  color: $silver;
 }
 
 .headmaster {
   background: $gryffindor-red;
+  color: $gold-brown;
 }
 
 .auror {
   background: $ravenelaw-blue;
+  color: $silver;
 }
 
 .founder {
   background: $slytherin-green;
+  color: #e1d4c5;
 }
