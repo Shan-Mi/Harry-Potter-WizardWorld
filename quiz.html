@@ -13,6 +13,11 @@
 
 <body id="quiz-body">
   <button class="go-to-fp"><img src="img/good luck potion.png" alt="" class="go-to-fp-img"></button>
+  <div class="level-btn-group">
+    <button class="level easy">Easy</button>
+    <button class="level medium">Medium</button>
+    <button class="level hard">Hard</button>
+  </div>
   <div class="container">
 
     <header>
@@ -20,7 +25,6 @@
         <h1>Harry Potter Quiz</h1>
       </div>
     </header>
-
 
     <section id="instructions" class="center">
       <h2>How big of a fan do you think you are?</h2>
@@ -31,7 +35,7 @@
     <section id="quiz">
       <div class="scoreAndQuestionArea">
         <h3 class="left">Score: <span id="displayScore">0</span></h3>
-        <h3 class="right">Question: <span id="displayQCount">1</span> of 5</h3>
+        <h3 class="right">Question: <span id="displayQCount">1</span> of <span class="questionsNumber">5</span></h3>
       </div>
       <div>
         <h2 id="askQuestion" class="center"></h2>

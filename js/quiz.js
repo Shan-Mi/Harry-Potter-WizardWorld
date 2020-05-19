@@ -9,10 +9,34 @@ const inform = document.getElementById("inform");
 const showScore = document.getElementById("showScore");
 const displayScore = document.getElementById("displayScore");
 const displayQCount = document.getElementById("displayQCount");
+
+const questionsNumberArea = document.querySelector('.questionsNumber');
+const easyBtn = document.querySelector('.level.easy');
+const mediumBtn = document.querySelector('.level.medium');
+const hardBtn = document.querySelector('.level.hard');
+
 let checkedRadio;
 let allRadios;
 let i;
 let score;
+let questionAmount;
+
+easyBtn.addEventListener('click', () => {
+  questionAmount = 5;
+  console.log(questionAmount)
+})
+
+mediumBtn.addEventListener('click', () => {
+  questionAmount = 10;
+  // console.log("10 questions")
+  console.log(questionAmount)
+})
+
+hardBtn.addEventListener('click', () => {
+  questionAmount = 15;
+  console.log(questionAmount)
+})
+
 
 const questions = [{
     question: "Hermione's Patronus takes the form of what animal?",
@@ -67,27 +91,27 @@ const questions = [{
   },
   /* 11 - 15 */
   {
-    question: "Where is Azkaban located?" ,
+    question: "Where is Azkaban located?",
     choices: ["The Burrow", "High Street", "The North Sea", "The West Sea"],
     correct: 2
   },
   {
-    question: "And what platform do students need to catch it from at King's Cross?" ,
+    question: "And what platform do students need to catch it from at King's Cross?",
     choices: ["Platform 9 1/4", "Platform 9 2/4", "Platform 9 3/4", "Platform 9 3/2"],
     correct: 2
   },
   {
-    question: "What is the name of the device that Dumbledore uses when putting out street lights?" ,
+    question: "What is the name of the device that Dumbledore uses when putting out street lights?",
     choices: ["Deluminator", "Howler", "Revealer", "Remembrall"],
     correct: 0
   },
   {
-    question: "What position does Harry play on the Quidditch team?" ,
+    question: "What position does Harry play on the Quidditch team?",
     choices: ["Chaser", "Beater", "Seeker", "Keeper"],
     correct: 2
   },
   {
-    question: "Which type of insect is Ronald Weasley most afraid of?" ,
+    question: "Which type of insect is Ronald Weasley most afraid of?",
     choices: ["Wasp", "Spider", "Centipede", "Croach"],
     correct: 1
   },
@@ -111,12 +135,15 @@ startBtn.addEventListener("click", function () {
   instructions.style.display = "none";
   submitBtn.style.display = "block";
   quiz.style.display = "block";
-  getQAs();
+  questionsNumberArea.innerHTML = questionAmount || 5;
+  getQAs(questionAmount || 5);
 });
 
 submitBtn.addEventListener("click", function () {
   allRadios = document.getElementsByName("option");
   let isChecked = false;
+
+  console.log(questionAmount);
   for (let j = 0; j < allRadios.length; j++) {
     if (allRadios[j].checked) {
       isChecked = true;
@@ -131,7 +158,7 @@ submitBtn.addEventListener("click", function () {
     deselectRadios();
     i++;
     displayQCount.innerHTML = i + 1;
-    getQAs();
+    getQAs(questionAmount);
   }
 });
 
@@ -149,8 +176,8 @@ function getResults() {
   }
 }
 
-function getQAs() {
-  if (i < 5) {
+function getQAs(number) {
+  if (i < number) {
     askQuestion.innerHTML = questions[i].question;
     for (let k = 0; k < 4; k++) {
       document.getElementById("answer" + k).innerHTML = questions[i].choices[k];
@@ -159,14 +186,14 @@ function getQAs() {
       document.getElementById("q" + k).querySelector(['input']).setAttribute("id", questions[i].choices[k]);
     }
   } else {
-    displayResults();
+    displayResults(number);
   }
 };
 
-function displayResults() {
+function displayResults(number) {
   quiz.style.display = "none";
   showScore.style.display = "block";
-  inform.innerHTML = "Congratulations!! You scored " + score + " out of 5 correct.";
+  inform.innerHTML = `Congratulations!! You scored ${score} out of ${number} correct.`;
 };
 
 resetBtn.addEventListener("click", function () {

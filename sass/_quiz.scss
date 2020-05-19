@@ -21,7 +21,7 @@
 }
 
 button {
-  margin: 15px auto 0 auto;
+  margin: 25px auto -20px auto;
   display: block;
   padding: 5px 15px;
   border-radius: 10px;
@@ -36,6 +36,7 @@ button {
 button:hover {
   color: black;
   background: white;
+  transition: color 0.1s, background 0.1s;
 }
 
 label {
@@ -50,14 +51,18 @@ label {
 }
 
 #quiz-body {
-  // background: center/cover no-repeat url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2076&q=80);
-  background: center/cover no-repeat url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background: linear-gradient(180deg, transparent 0%, #333 100%), url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2076&q=80);
+  // background: center/cover no-repeat url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   width: 100vw;
   align-items: center;
+  justify-content: space-around;
 
   .go-to-fp {
     order: 1;
@@ -92,7 +97,6 @@ label {
 
   #quiz-footer {
     order: 2;
-    margin-bottom: -1rem;
     margin-top: 4rem;
   }
 }
@@ -103,6 +107,7 @@ label {
   height: max-content;
   border: 2px solid #ccc;
   background: rgba(227, 227, 240, 0.7);
+  margin: auto;
 
   .center {
     h1 {
@@ -115,4 +120,21 @@ label {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.level-btn-group {
+  position: absolute;
+  left: 50%;
+  width: 350px;
+  display: flex;
+  top: 2rem;
+  transform: translateX(-50%);
+
+  &>*:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .level {
+    width: 100%;
+  }
 }

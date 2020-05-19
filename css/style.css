@@ -2088,7 +2088,7 @@ footer .project-info {
 }
 
 button {
-  margin: 15px auto 0 auto;
+  margin: 25px auto -20px auto;
   display: block;
   padding: 5px 15px;
   border-radius: 10px;
@@ -2103,6 +2103,9 @@ button {
 button:hover {
   color: black;
   background: white;
+  -webkit-transition: color 0.1s, background 0.1s;
+  -o-transition: color 0.1s, background 0.1s;
+  transition: color 0.1s, background 0.1s;
 }
 
 label {
@@ -2117,7 +2120,12 @@ label {
 }
 
 #quiz-body {
-  background: center/cover no-repeat url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#333)), url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2076&q=80);
+  background: -o-linear-gradient(top, transparent 0%, #333 100%), url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2076&q=80);
+  background: linear-gradient(180deg, transparent 0%, #333 100%), url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2076&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2133,6 +2141,8 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #quiz-body .go-to-fp {
@@ -2186,7 +2196,6 @@ label {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin-bottom: -1rem;
   margin-top: 4rem;
 }
 
@@ -2198,6 +2207,7 @@ label {
   height: max-content;
   border: 2px solid #ccc;
   background: rgba(227, 227, 240, 0.7);
+  margin: auto;
 }
 
 .container .center h1 {
@@ -2212,5 +2222,26 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.level-btn-group {
+  position: absolute;
+  left: 50%;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 2rem;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.level-btn-group > *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.level-btn-group .level {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
