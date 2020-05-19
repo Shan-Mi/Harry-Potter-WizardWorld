@@ -21,23 +21,6 @@ let i;
 let score;
 let questionAmount;
 
-easyBtn.addEventListener('click', () => {
-  questionAmount = 5;
-  console.log(questionAmount)
-})
-
-mediumBtn.addEventListener('click', () => {
-  questionAmount = 10;
-  // console.log("10 questions")
-  console.log(questionAmount)
-})
-
-hardBtn.addEventListener('click', () => {
-  questionAmount = 15;
-  console.log(questionAmount)
-})
-
-
 const questions = [{
     question: "Hermione's Patronus takes the form of what animal?",
     choices: ["Fox", "Gazelle", "Otter", "Beaver"],
@@ -117,6 +100,25 @@ const questions = [{
   },
 ];
 
+easyBtn.addEventListener('click', () => {
+  questionAmount = 5;
+  console.log(questionAmount);
+  showQuiz();
+})
+
+mediumBtn.addEventListener('click', () => {
+  questionAmount = 10;
+  // console.log("10 questions")
+  console.log(questionAmount);
+  showQuiz();
+})
+
+hardBtn.addEventListener('click', () => {
+  questionAmount = 15;
+  console.log(questionAmount);
+  showQuiz();
+})
+
 window.onload = beginQuiz;
 
 function beginQuiz() {
@@ -131,13 +133,7 @@ function beginQuiz() {
   displayScore.innerHTML = 0;
 }
 
-startBtn.addEventListener("click", function () {
-  instructions.style.display = "none";
-  submitBtn.style.display = "block";
-  quiz.style.display = "block";
-  questionsNumberArea.innerHTML = questionAmount || 5;
-  getQAs(questionAmount || 5);
-});
+startBtn.addEventListener("click", showQuiz);
 
 submitBtn.addEventListener("click", function () {
   allRadios = document.getElementsByName("option");
@@ -161,6 +157,14 @@ submitBtn.addEventListener("click", function () {
     getQAs(questionAmount);
   }
 });
+
+function showQuiz() {
+  instructions.style.display = "none";
+  submitBtn.style.display = "block";
+  quiz.style.display = "block";
+  questionsNumberArea.innerHTML = questionAmount || 5;
+  getQAs(questionAmount || 5);
+}
 
 function deselectRadios() {
   allRadios = document.getElementsByName("option");
