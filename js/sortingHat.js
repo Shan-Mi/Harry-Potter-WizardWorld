@@ -72,3 +72,8 @@ const goToSpellBtn = document.querySelector('.go-to-spell')
 goToSpellBtn.addEventListener('click', () => {
   window.location = 'spell.html'
 })
+
+document.querySelector(".hamburguer").addEventListener("click", function(){
+	document.querySelector(".full-menu").classList.toggle("active");
+	document.querySelector(".hamburguer").classList.toggle("close-hamburguer");
+});

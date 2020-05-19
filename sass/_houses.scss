@@ -45,15 +45,17 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: -2.5rem;
+            top: -2rem;
             width: max-content;
             color: #333;
           }
 
           .go-to-fp-img {
-            width: 135px;
+            width: 10vw;
             display: block;
             margin: 0 auto;
+            min-width: 80px;
+            max-width: 150px;
 
             &:hover {
               transform: scale(1.1);
@@ -64,11 +66,14 @@
         }
 
         .search-box {
-          width: 260px;
+          // width: 260px;
           padding: 20px 35px;
           border: 1px solid white;
           border-radius: 5px;
           font-size: 16px;
+          min-width: 180px;
+          width: 40vw;
+          max-width: 260px;
         }
 
         .small-icon-wrapper {

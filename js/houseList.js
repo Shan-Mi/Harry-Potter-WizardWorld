@@ -75,7 +75,7 @@ const displayList = (characters) => {
 
       character.hasOwnProperty('wand') ? hasAWand = 'hasWand' : hasAWand = ''
 
-        return `
+      return `
         <div class="role ${roleColor} ${hasAWand}" data-name="${character.name}">
           <h3 class="name">${character.name}</h3>
           <p class="detailed-role">${character.role}</p>
@@ -158,7 +158,7 @@ listWrapperArea.addEventListener('click', (e) => {
   }
 })
 
-// const closeAnimationBtn = document.querySelector('.close-wand-animation')
-// closeAnimationBtn.addEventListener('click', ()=>{
-
-// })
+const goBackToFrontPageBtn = document.querySelector('.go-to-fp')
+goBackToFrontPageBtn.addEventListener('click', () => {
+  window.location = "index.html"
+})
