@@ -1,6 +1,5 @@
 # Harry-Potter-Wizarland Website
-This is an individuel assignment for Nackademin Frontend Project, topic is made up by myself.
-Added quiz page
+This is an individuel assignment for Nackademin Frontend Project, topic is made up by myself.[ONLINE VERSION](https://shanmi.se/wizarland/index.html)  *Added quiz page*
 
 ## TODO
 update different levels, e.g. 5 questions - easy; 10 questions - medium; 15 questions - hard; 20 questions - big fan, etc..
