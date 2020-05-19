@@ -75,6 +75,18 @@ button:hover {
   border-radius: 5px;
 }
 
+#spell-body #spell-main .spell-card .spell-name {
+  font-size: 30px;
+}
+
+#spell-body #spell-main .spell-card .spell-effect {
+  font-size: 20px;
+}
+
+#spell-body #spell-main .spell-card .spell-type {
+  font-size: 20px;
+}
+
 #spell-body #spell-main .getSpell {
   display: block;
   margin: 2rem auto auto;
@@ -87,14 +99,15 @@ button:hover {
 #spell-body .goBackToFrontPage {
   padding: 20px 30px;
   border-color: #006daf;
+  font-size: 20px;
   border-radius: 50%;
   color: #006daf;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  -webkit-transition: color 150ms ease-in-out;
-  -o-transition: color 150ms ease-in-out;
-  transition: color 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out 0.1s;
+  -o-transition: color 150ms ease-in-out 0.1s;
+  transition: color 150ms ease-in-out 0.1s;
 }
 
 #spell-body .goBackToFrontPage:after {
@@ -306,7 +319,7 @@ body {
   background: linear-gradient(to bottom, #e6ba93, #dbaf88);
   -webkit-box-shadow: inset 0 -4px 10px rgba(133, 96, 69, 0.15), 0 2px 3px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 -4px 10px rgba(133, 96, 69, 0.15), 0 2px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 50px 50px 40px 40px;
+  border-radius: 30% 76% 55% 50% / 29% 39% 47% 58%;
   z-index: 4;
 }
 
@@ -336,7 +349,7 @@ body {
 
 .avatar__eyes.right {
   right: 30px;
-  top: 5.9rem;
+  top: 3.2em;
 }
 
 .avatar__eyes.right::after {
@@ -379,7 +392,7 @@ body {
   right: -15px;
   left: auto;
   border-radius: 50% 100% 100% 50%;
-  top: 5.6rem;
+  top: 3rem;
 }
 
 .avatar__hair {
@@ -682,7 +695,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 300px;
-  margin: 2em auto 0;
+  margin: 1.5rem auto 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -732,6 +745,37 @@ body {
   top: 3px;
 }
 
+.avatar-gender.reminder::after {
+  content: "Click Name to go to relevant house.";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -26px);
+      -ms-transform: translate(-50%, -26px);
+          transform: translate(-50%, -26px);
+  -webkit-animation: show 2s linear infinite;
+          animation: show 2s linear infinite;
+  font-size: 16px;
+  color: #f4d946;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-content__wrapper,
 .avatar__tie,
 .avatar__coat {
@@ -755,6 +799,17 @@ body {
   transition: opacity 0.4s ease 2.3s;
   width: auto;
   opacity: 1;
+}
+
+.sorting-hat.animate .sorting-hat__answer:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .sorting-hat.animate .sorting-hat__top {
@@ -833,8 +888,8 @@ body {
 
 #front-page-header .frontPageBadge {
   width: 190px;
-  -webkit-animation: spinIn 2s both 1s;
-          animation: spinIn 2s both 1s;
+  -webkit-animation: spinIn 2s both;
+          animation: spinIn 2s both;
 }
 
 #front-page-header .spell {
@@ -1317,31 +1372,53 @@ footer {
 }
 
 footer .go-to-spell-wrapper {
-  width: 100%;
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: calc(100vh - 615px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .go-to-spell-wrapper .go-to-spell {
   width: 3rem;
+  -webkit-animation: tada 1s infinite;
+          animation: tada 1s infinite;
 }
 
 footer .go-to-spell-wrapper .go-to-spell:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
-  -o-transition: transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   cursor: pointer;
 }
 
-footer .go-to-spell-wrapper .go-to-spell + span {
-  position: absolute;
-  top: 40%;
+footer .go-to-spell-wrapper a {
+  color: #ccc;
+}
+
+footer .go-to-spell-wrapper a:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: 18px;
+  text-indent: 10px;
+  -webkit-transition: font-size 0.2s, text-indent 0.1s, -webkit-transform 0.2s;
+  transition: font-size 0.2s, text-indent 0.1s, -webkit-transform 0.2s;
+  -o-transition: transform 0.2s, font-size 0.2s, text-indent 0.1s;
+  transition: transform 0.2s, font-size 0.2s, text-indent 0.1s;
+  transition: transform 0.2s, font-size 0.2s, text-indent 0.1s, -webkit-transform 0.2s;
 }
 
 #g-body {
@@ -1380,6 +1457,25 @@ footer .go-to-spell-wrapper .go-to-spell + span {
   height: 100vh;
 }
 
+#g-body .g-main .sticky-wrapper .icon-wrapper .big-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#g-body .g-main .sticky-wrapper .icon-wrapper .big-icon::after {
+  content: attr(data-info);
+  font-size: 20px;
+  margin-top: .5rem;
+}
+
 #g-body .g-main .sticky-wrapper .icon-wrapper .big-icon .icon.big {
   width: 200px;
 }
@@ -1389,7 +1485,10 @@ footer .go-to-spell-wrapper .go-to-spell + span {
       -ms-flex-order: 1;
           order: 1;
   position: relative;
-  width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background: transparent;
 }
 
 #g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp::before {
@@ -1400,6 +1499,10 @@ footer .go-to-spell-wrapper .go-to-spell + span {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -2.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #333;
 }
 
 #g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp .go-to-fp-img {
@@ -1459,6 +1562,17 @@ footer .go-to-spell-wrapper .go-to-spell + span {
   -ms-grid-rows: 2fr (1fr)[4];
       grid-template-rows: 2fr repeat(4, 1fr);
   cursor: pointer;
+}
+
+#g-body .g-main .list-wrapper .role:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 #g-body .g-main .list-wrapper .role > * {
@@ -1704,6 +1818,17 @@ footer .go-to-spell-wrapper .go-to-spell + span {
   }
 }
 
+.icon.small:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
 #form {
   width: 65%;
   margin-left: 35%;
@@ -1711,7 +1836,6 @@ footer .go-to-spell-wrapper .go-to-spell + span {
 
 .right {
   text-align: right;
-  margin-top: -45px;
 }
 
 .center {
@@ -1753,5 +1877,95 @@ label {
   .container {
     width: 94%;
   }
+}
+
+#quiz-body {
+  background: center/cover no-repeat url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#quiz-body .go-to-fp {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  position: relative;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background: transparent;
+}
+
+#quiz-body .go-to-fp::before {
+  content: 'Go back to frontpage';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -2.5rem;
+  color: #d2dae2;
+  font-size: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#quiz-body .go-to-fp .go-to-fp-img {
+  width: 135px;
+  display: block;
+  margin: 0 auto;
+  -webkit-filter: invert(67%) sepia(41%) saturate(4017%) hue-rotate(178deg) brightness(100%) contrast(91%);
+          filter: invert(67%) sepia(41%) saturate(4017%) hue-rotate(178deg) brightness(100%) contrast(91%);
+}
+
+#quiz-body .go-to-fp .go-to-fp-img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: invert(33%) sepia(36%) saturate(2257%) hue-rotate(339deg) brightness(101%) contrast(94%);
+          filter: invert(33%) sepia(36%) saturate(2257%) hue-rotate(339deg) brightness(101%) contrast(94%);
+  -webkit-transition: -webkit-filter 0.5s, -webkit-transform 0.3s;
+  transition: -webkit-filter 0.5s, -webkit-transform 0.3s;
+  -o-transition: filter 0.5s, transform 0.3s;
+  transition: filter 0.5s, transform 0.3s;
+  transition: filter 0.5s, transform 0.3s, -webkit-filter 0.5s, -webkit-transform 0.3s;
+}
+
+.container {
+  /* border: 2px solid black; */
+  /* background: rgba(0, 0, 20, 0.3); */
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 2px solid #ccc;
+  background: rgba(227, 227, 240, 0.7);
+}
+
+.container .center h1 {
+  margin-bottom: 2rem;
+}
+
+.scoreAndQuestionArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

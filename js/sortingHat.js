@@ -7,6 +7,7 @@ const leftEye = document.querySelector('.avatar__eyes.left')
 const rightEye = document.querySelector('.avatar__eyes.right')
 const mouth = document.querySelector('.avatar__mouth')
 const jumpToAnswerLink = document.querySelector('#jumpToAnswerLink')
+const genderArea = document.querySelector('.avatar-gender')
 
 let item = houses[Math.floor(Math.random() * houses.length)];
 let sortingHatAnswer = document.querySelector('.sorting-hat__answer')
@@ -15,6 +16,7 @@ let hair = document.querySelector('.avatar__hair')
 
 sortMeBtn.addEventListener('click', () => {
   // sortMeAreaWrapper.setAttribute('class', '')
+  genderArea.classList.remove('reminder')
   sortMeAreaWrapper.removeAttribute('class')
   sortMeAreaWrapper.classList.add('main-content__wrapper')
   sortingHat.classList.remove('animate')
@@ -40,6 +42,10 @@ sortMeBtn.addEventListener('click', () => {
 
   setTimeout(function () {
     sortMeAreaWrapper.classList.add(`${item}`)
+  }, 4000);
+
+  setTimeout(() => {
+    genderArea.classList.add('reminder')
   }, 4000);
 })
 

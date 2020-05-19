@@ -7,78 +7,67 @@
   <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/tX7zvKM/FAVPNG-harry-potter-clip-art-9nm4-NLHn.png"
     title="favicon">
   <title>Wizarland | Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body id="quiz-body">
+  <button class="go-to-fp"><img src="img/good luck potion.png" alt="" class="go-to-fp-img"></button>
+  <div class="container">
 
-  <html lang="en">
+    <header>
+      <div class="center">
+        <h1>Harry Potter Quiz</h1>
+      </div>
+    </header>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-  </head>
 
-  <body>
+    <section id="instructions" class="center">
+      <h2>How big of a fan do you think you are?</h2>
+      <h3>Test your Harry Potter knowledge and see where you stand.</h3>
+      <button id="startBtn">Start</button>
+    </section>
 
-    <div class="container">
+    <section id="quiz">
+      <div class="scoreAndQuestionArea">
+        <h3 class="left">Score: <span id="displayScore">0</span></h3>
+        <h3 class="right">Question: <span id="displayQCount">1</span> of 5</h3>
+      </div>
+      <div>
+        <h2 id="askQuestion" class="center"></h2>
 
-      <header>
-        <div class="center">
-          <h1>Harry Potter Quiz</h1>
-        </div>
-      </header>
+        <form id="form">
+          <div id="q0">
+            <input id="" type="radio" name="option" value="">
+            <label id="answer0" for=""></label>
+          </div>
+          <div id="q1">
+            <input id="" type="radio" name="option" value="">
+            <label id="answer1" for=""></label>
+          </div>
+          <div id="q2">
+            <input id="" type="radio" name="option" value="">
+            <label id="answer2" for=""></label>
+          </div>
+          <div id="q3">
+            <input id="" type="radio" name="option" value="">
+            <label id="answer3" for=""></label>
+          </div>
+        </form>
 
-      <section id="instructions" class="center">
-        <h2>How big of a fan do you think you are?</h2>
-        <h3>Test your Harry Potter knowledge and see where you stand.</h3>
-        <button id="startBtn">Start</button>
-      </section>
+        <button id="submitBtn">Submit</button>
+      </div>
+    </section>
 
-      <section id="quiz">
-        <div>
-          <h3 class="left">Score: <span id="displayScore">0</span></h3>
-          <h3 class="right">Question: <span id="displayQCount">1</span> of 5</h3>
-        </div>
-        <div>
-          <h2 id="askQuestion" class="center"></h2>
+    <section id="showScore">
+      <h2 id="inform" class="center"></h2>
+      <button id="resetBtn">Try Again?</button>
+    </section>
 
-          <form id="form">
-            <div id="q0">
-              <input id="" type="radio" name="option" value="">
-              <label id="answer0" for=""></label>
-            </div>
-            <div id="q1">
-              <input id="" type="radio" name="option" value="">
-              <label id="answer1" for=""></label>
-            </div>
-            <div id="q2">
-              <input id="" type="radio" name="option" value="">
-              <label id="answer2" for=""></label>
-            </div>
-            <div id="q3">
-              <input id="" type="radio" name="option" value="">
-              <label id="answer3" for=""></label>
-            </div>
-          </form>
+  </div>
 
-          <button id="submitBtn">Submit</button>
-        </div>
-      </section>
-
-      <section id="showScore">
-        <h2 id="inform" class="center"></h2>
-        <button id="resetBtn">Try Again?</button>
-      </section>
-
-    </div>
-
-    <!-- JavaScript -->
-    <script src="js/quiz.js"></script>
-  </body>
-
-  </html>
+  <!-- JavaScript -->
+  <script src="js/quiz.js"></script>
 </body>
 
 </html>

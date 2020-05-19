@@ -29,12 +29,17 @@
       box-shadow: 18px 22px 18px -21px #cccccc;
       border-radius: 5px;
 
-      .spell-name {}
+      .spell-name {
+        font-size: 30px;
+      }
 
-      .spell-effect {}
+      .spell-effect {
+        font-size: 20px;
+      }
 
-      .spell-type {}
-
+      .spell-type {
+        font-size: 20px;
+      }
     }
 
     .getSpell {
@@ -45,20 +50,18 @@
       border: 1px solid gray;
       font-size: 16px;
     }
-
-
   }
 
   .goBackToFrontPage {
     padding: 20px 30px;
     border-color: $blue;
-    // border: 0;
+    font-size: 20px;
     border-radius: 50%;
     color: $blue;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out 0.1s;
 
     &:after {
       content: '';

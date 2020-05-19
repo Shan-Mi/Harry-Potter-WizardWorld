@@ -30,16 +30,6 @@ body {
 }
 
 .gryffindor {
-  // background: $red;
-
-  .avatar__coat {
-
-    &:before,
-    &:after {
-      // background: $red;
-    }
-  }
-
   .avatar__tie {
     @include bg-gradient(306deg, $red, $gold);
 
@@ -50,16 +40,6 @@ body {
 }
 
 .hufflepuff {
-  // background: $yellow;
-
-  .avatar__coat {
-
-    &:before,
-    &:after {
-      // background: $yellow;
-    }
-  }
-
   .avatar__tie {
     @include bg-gradient(306deg, $yellow, $black);
 
@@ -70,16 +50,6 @@ body {
 }
 
 .ravenclaw {
-  // background: $blue;
-
-  .avatar__coat {
-
-    &:before,
-    &:after {
-      // background: $blue;
-    }
-  }
-
   .avatar__tie {
     @include bg-gradient(306deg, $blue, $blue-light);
 
@@ -90,16 +60,6 @@ body {
 }
 
 .slytherin {
-  // background: $green;
-
-  .avatar__coat {
-
-    &:before,
-    &:after {
-      // background: $green;
-    }
-  }
-
   .avatar__tie {
     @include bg-gradient(306deg, $green, $silver);
 
@@ -153,7 +113,9 @@ body {
     background: linear-gradient(to bottom, $beige, $beige-tone);
     box-shadow: inset 0 -4px 10px rgba($brown, 0.15),
       0 2px 3px rgba(0, 0, 0, 0.05);
-    border-radius: 50px 50px 40px 40px;
+    // border-radius: 50px 50px 40px 40px;
+    // border-radius: 10% 10% 30% 32% / 10% 10% 26% 28% ;
+    border-radius: 30% 76% 55% 50% / 29% 39% 47% 58%;
     z-index: 4;
   }
 
@@ -192,7 +154,8 @@ body {
 
     &.right {
       right: 30px;
-      top: 5.9rem;
+      // top: 5.9rem;
+      top: 3.2em;
 
       &::after {
         content: "";
@@ -244,7 +207,7 @@ body {
       right: -15px;
       left: auto;
       border-radius: 50% 100% 100% 50%;
-      top: 5.6rem;
+      top: 3rem;
     }
   }
 
@@ -528,7 +491,7 @@ body {
 .avatar-gender {
   display: flex;
   max-width: 300px;
-  margin: 2em auto 0;
+  margin: 1.5rem auto 0;
   align-items: center;
 
   >p,
@@ -572,6 +535,29 @@ body {
       top: 3px;
     }
   }
+
+  &.reminder {
+    &::after {
+      content: "Click Name to go to relevant house.";
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -26px);
+      animation: show 2s linear infinite;
+      font-size: 16px;
+      // color: #d98213;
+      color: #f4d946;
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 //animations
@@ -594,6 +580,11 @@ body {
     transition: opacity 0.4s ease 2.3s;
     width: auto;
     opacity: 1;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s;
+    }
   }
 
   .sorting-hat__top {
@@ -623,7 +614,6 @@ body {
     }
   }
 }
-
 
 
 /* animation ends */
@@ -657,7 +647,8 @@ body {
 
   .frontPageBadge {
     width: 190px;
-    animation: spinIn 2s both 1s;
+    // animation: spinIn 2s both 1s;
+    animation: spinIn 2s both;
   }
 
   //need to change position when it comes to smaller screen
@@ -923,24 +914,33 @@ footer {
   position: relative;
 
   .go-to-spell-wrapper {
-    width: 100%;
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: calc(100vh - 615px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+
 
     .go-to-spell {
       width: 3rem;
-
+      animation: tada 1.2s infinite;
 
       &:hover {
         transform: scale(1.1);
-        transition: transform 0.6s;
+        transition: transform 0.2s;
         cursor: pointer;
       }
+    }
 
-      &+span {
-        position: absolute;
-        top: 40%;
+    a {
+      color: $silver;
+
+      &:hover {
+        transform: scale(1.1);
+        font-size: 18px;
+        text-indent: 10px;
+        transition: transform 0.2s, font-size 0.2s, text-indent 0.1s;
       }
     }
   }

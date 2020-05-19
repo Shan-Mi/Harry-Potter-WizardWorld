@@ -120,3 +120,8 @@ function displayResults() {
 resetBtn.addEventListener("click", function () {
   beginQuiz();
 });
+
+const goToFrontPageBtn = document.querySelector('.go-to-fp')
+goToFrontPageBtn.addEventListener('click', () => {
+  window.location = 'index.html'
+})
