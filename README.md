@@ -1,5 +1,6 @@
 # Harry-Potter-Wizarland Website [ONLINE VERSION](https://shanmi.se/wizarland/index.html)
-This is an individuel assignment for Nackademin Frontend Project, topic is made up by myself.*Added quiz page* Now there are three different levels, 5 questions - easy; 10 questions - medium; 15 questions - hard.
+
+This is an individuel assignment for Nackademin Frontend Project, topic is made up by myself. 
 
 ### Background:
 This is a website for fans of Harry Potter film series, and here they can see all characters from Gryffindor / Hufflepuff / Ravenclaw / Slytherin as well as spells, etc. basically everything about Harry Potter’s magic world. They can also search by character’s name to get character’s information. This website is just for fun, and no user data will be stored, so no database requirement is needed. It is based on [API Link 1](https://www.potterapi.com/v1/) or maybe [API link 2](https://hp-api.herokuapp.com/) [Another website](https://www.wizardingworld.com/discover/films)) Maybe will get some information from here as well.
@@ -16,6 +17,10 @@ Once user click a name, a overlay module will be displayed. User could see detai
 Search function: User could be able to search their desired character by input name (validation needed: name length more than 2 and less than 20, only alphabet allowed).
 
 On loading page there will be a link to spell page, and there a random spell will be got from API. It will be able to go back to startpage as well as get a new spell. Add some animation if possible.
+
+**Added quiz page**
+
+Now there are three different levels, 5 questions - easy; 10 questions - medium; 15 questions - hard.
 
 ### Requirement:
 - No frameworks, use fetch/axios to get data.
@@ -38,8 +43,8 @@ GET     |-sortingHat (the only route that does not require a key)
         |-spells (Returns all spells. 151)
 
 **characters info structure: URL Query Parameters**
-
-**Param**            **Value**       **Description**
+```
+Param                 Value           Description
 
 key                   your api key    required   $2a$10$tE9Q/PpSuP7rQLFkrB2IOOcl.0ptM34qLwotYCBjL/p9DIL.o4pMK
 
@@ -73,5 +78,5 @@ boggart               string
 
 animagus              string
 
-
+```
 
