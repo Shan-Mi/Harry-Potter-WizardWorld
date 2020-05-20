@@ -29,7 +29,7 @@ Now there are three different levels, 5 questions - easy; 10 questions - medium;
 
 ---
 Following are information that can get from API (https://www.potterapi.com/v1/) :
-
+```
 GET     |-sortingHat (the only route that does not require a key)
 
         |-characters (Returns all characters.  195)
@@ -41,7 +41,7 @@ GET     |-sortingHat (the only route that does not require a key)
         |-houses/{houseId}
 
         |-spells (Returns all spells. 151)
-
+```
 **characters info structure: URL Query Parameters**
 ```
 Param                 Value           Description
