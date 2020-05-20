@@ -102,20 +102,16 @@ const questions = [{
 
 easyBtn.addEventListener('click', () => {
   questionAmount = 5;
-  // console.log(questionAmount);
   showQuiz();
 })
 
 mediumBtn.addEventListener('click', () => {
   questionAmount = 10;
-  // console.log("10 questions")
-  // console.log(questionAmount);
   showQuiz();
 })
 
 hardBtn.addEventListener('click', () => {
   questionAmount = 15;
-  // console.log(questionAmount);
   showQuiz();
 })
 
@@ -139,7 +135,6 @@ submitBtn.addEventListener("click", function () {
   allRadios = document.getElementsByName("option");
   let isChecked = false;
 
-  // console.log(questionAmount || 5);
   for (let j = 0; j < allRadios.length; j++) {
     if (allRadios[j].checked) {
       isChecked = true;
@@ -163,7 +158,6 @@ function showQuiz() {
   submitBtn.style.display = "block";
   quiz.style.display = "block";
   questionsNumberArea.innerHTML = questionAmount || 5;
-  // console.log(questionAmount || 5)
   getQAs(questionAmount || 5);
 }
 
@@ -198,7 +192,12 @@ function getQAs(number) {
 function displayResults(number) {
   quiz.style.display = "none";
   showScore.style.display = "block";
-  inform.innerHTML = `Congratulations!! You scored ${score} out of ${number} correct.`;
+  if (score == '0') {
+    console.log('loser')
+    inform.innerHTML = `You scored ${score} out of ${number} correct. Try harder next time, good luck!`
+  } else {
+    inform.innerHTML = `Congratulations!! You scored ${score} out of ${number} correct.`;
+  }
 };
 
 resetBtn.addEventListener("click", function () {
