@@ -11,8 +11,8 @@
 
 html {
   font-family: 'Lobster Two', cursive;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 a {
@@ -1486,9 +1486,9 @@ footer .go-to-spell-wrapper a:hover {
 .full-menu .project-info {
   position: absolute;
   bottom: 0;
-  -webkit-transform: translateY(-2rem);
-      -ms-transform: translateY(-2rem);
-          transform: translateY(-2rem);
+  -webkit-transform: translateY(-1rem);
+      -ms-transform: translateY(-1rem);
+          transform: translateY(-1rem);
 }
 
 .full-menu li {
@@ -2080,11 +2080,17 @@ footer .project-info {
 }
 
 .container {
-  margin: 50px auto;
   width: 500px;
-  border: 2px solid black;
   padding: 3% 3%;
-  background: rgba(0, 0, 20, 0.3);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 2px solid #ccc;
+  background: rgba(227, 227, 240, 0.7);
+}
+
+.container .center h1 {
+  margin-bottom: 1rem;
 }
 
 button {
@@ -2172,7 +2178,7 @@ label {
 }
 
 #quiz-body .go-to-fp .go-to-fp-img {
-  width: 135px;
+  width: 12vw;
   display: block;
   margin: 0 auto;
   -webkit-filter: invert(67%) sepia(41%) saturate(4017%) hue-rotate(178deg) brightness(100%) contrast(91%);
@@ -2196,22 +2202,12 @@ label {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin-top: 4rem;
 }
 
-.container {
-  /* border: 2px solid black; */
-  /* background: rgba(0, 0, 20, 0.3); */
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  border: 2px solid #ccc;
-  background: rgba(227, 227, 240, 0.7);
-  margin: auto;
-}
-
-.container .center h1 {
-  margin-bottom: 2rem;
+#quiz-body #quiz-footer .project-info {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .scoreAndQuestionArea {
@@ -2225,23 +2221,20 @@ label {
 }
 
 .level-btn-group {
-  position: absolute;
   left: 50%;
   width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 2rem;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.level-btn-group > *:not(:last-child) {
-  margin-right: 2rem;
 }
 
 .level-btn-group .level {
   width: 100%;
+  margin: 0;
+}
+
+.level-btn-group > *:not(:last-child) {
+  margin: 0 2rem 0 0;
 }
 /*# sourceMappingURL=style.css.map */
