@@ -102,20 +102,20 @@ const questions = [{
 
 easyBtn.addEventListener('click', () => {
   questionAmount = 5;
-  console.log(questionAmount);
+  // console.log(questionAmount);
   showQuiz();
 })
 
 mediumBtn.addEventListener('click', () => {
   questionAmount = 10;
   // console.log("10 questions")
-  console.log(questionAmount);
+  // console.log(questionAmount);
   showQuiz();
 })
 
 hardBtn.addEventListener('click', () => {
   questionAmount = 15;
-  console.log(questionAmount);
+  // console.log(questionAmount);
   showQuiz();
 })
 
@@ -139,7 +139,7 @@ submitBtn.addEventListener("click", function () {
   allRadios = document.getElementsByName("option");
   let isChecked = false;
 
-  console.log(questionAmount);
+  // console.log(questionAmount || 5);
   for (let j = 0; j < allRadios.length; j++) {
     if (allRadios[j].checked) {
       isChecked = true;
@@ -154,7 +154,7 @@ submitBtn.addEventListener("click", function () {
     deselectRadios();
     i++;
     displayQCount.innerHTML = i + 1;
-    getQAs(questionAmount);
+    getQAs(questionAmount || 5);
   }
 });
 
@@ -163,6 +163,7 @@ function showQuiz() {
   submitBtn.style.display = "block";
   quiz.style.display = "block";
   questionsNumberArea.innerHTML = questionAmount || 5;
+  // console.log(questionAmount || 5)
   getQAs(questionAmount || 5);
 }
 

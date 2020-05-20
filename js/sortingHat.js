@@ -15,15 +15,12 @@ let genderSelectors = document.querySelectorAll('input[name=avatar-gender]')
 let hair = document.querySelector('.avatar__hair')
 
 sortMeBtn.addEventListener('click', () => {
-  // sortMeAreaWrapper.setAttribute('class', '')
   genderArea.classList.remove('reminder')
   sortMeAreaWrapper.removeAttribute('class')
   sortMeAreaWrapper.classList.add('main-content__wrapper')
   sortingHat.classList.remove('animate')
   avatarMouth.classList.remove('animate')
 
-  const houses = ["hufflepuff", "gryffindor", "ravenclaw", "slytherin"]
-  let item = houses[Math.floor(Math.random() * houses.length)]
   jumpToAnswerLink.setAttribute('href', `${item}.html`)
 
   sortingHatAnswer.classList.add('click-reminder')
