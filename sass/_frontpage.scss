@@ -618,7 +618,7 @@ body {
 
 /* animation ends */
 .main-content__wrapper {
-  background: url('../img/hogwarts.png');
+  background: center / cover url("../img/hogwarts.png") no-repeat;
 }
 
 #front-page-header {
@@ -703,6 +703,10 @@ body {
       right: 0;
       margin-right: 2rem;
       text-align: right;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
     }
   }
 }
@@ -921,6 +925,9 @@ footer {
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 800px) {
+      bottom: 0;
+    }
 
     .go-to-spell {
       width: 3rem;

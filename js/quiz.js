@@ -178,10 +178,10 @@ function getQAs(number) {
   if (i < number) {
     askQuestion.innerHTML = questions[i].question;
     for (let k = 0; k < 4; k++) {
-      document.getElementById("answer" + k).innerHTML = questions[i].choices[k];
-      document.getElementById("answer" + k).setAttribute("for", questions[i].choices[k]);
-      document.getElementById("q" + k).querySelector(['input']).setAttribute("value", questions[i].choices[k]);
-      document.getElementById("q" + k).querySelector(['input']).setAttribute("id", questions[i].choices[k]);
+      document.querySelector(`#answer${k}`).innerHTML = questions[i].choices[k];
+      document.querySelector(`#answer${k}`).setAttribute("for", questions[i].choices[k]);
+      document.querySelector(`#q${k}`).querySelector(['input']).setAttribute("value", questions[i].choices[k]);
+      document.querySelector(`#q${k}`).querySelector(['input']).setAttribute("id", questions[i].choices[k]);
     }
   } else {
     displayResults(number);
