@@ -132,16 +132,17 @@ function beginQuiz() {
 startBtn.addEventListener("click", showQuiz);
 
 submitBtn.addEventListener("click", function () {
-  allRadios = document.getElementsByName("option");
+  allRadios = Array.from(document.querySelectorAll("[name=option]"))
   let isChecked = false;
 
-  for (let j = 0; j < allRadios.length; j++) {
-    if (allRadios[j].checked) {
-      isChecked = true;
-      checkedRadio = j;
-      break;
+  allRadios.forEach(radio => {
+    if (radio.checked) {
+      isChecked = true
+      checkedRadio = allRadios.indexOf(radio)
+      return;
     }
-  }
+  })
+
   if (!(isChecked)) {
     alert("Please select an answer before moving on");
   } else {
@@ -162,10 +163,8 @@ function showQuiz() {
 }
 
 function deselectRadios() {
-  allRadios = document.getElementsByName("option");
-  for (let p = 0; p < allRadios.length; p++) {
-    allRadios[p].checked = false;
-  }
+  allRadios = document.querySelectorAll("[name=option]")
+  allRadios.forEach(item => item.checked = false)
 }
 
 function getResults() {

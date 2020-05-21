@@ -11,8 +11,8 @@
 
 html {
   font-family: 'Lobster Two', cursive;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 a {
