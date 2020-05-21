@@ -848,7 +848,7 @@ body {
 
 /* animation ends */
 .main-content__wrapper {
-  background: url("../img/hogwarts.png");
+  background: center/cover url("../img/hogwarts.png") no-repeat;
 }
 
 #front-page-header {
@@ -958,6 +958,12 @@ body {
   right: 0;
   margin-right: 2rem;
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  #fp-main .poem {
+    display: none;
+  }
 }
 
 .sorting-hat__answer.click-reminder::after {
@@ -1384,6 +1390,12 @@ footer .go-to-spell-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  footer .go-to-spell-wrapper {
+    bottom: 0;
+  }
 }
 
 footer .go-to-spell-wrapper .go-to-spell {
