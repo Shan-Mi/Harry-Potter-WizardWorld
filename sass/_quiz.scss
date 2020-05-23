@@ -13,6 +13,9 @@
 
 .container {
   width: 500px;
+  width: 80vw !important;
+  min-width: 280px;
+  max-width: 500px;
   padding: 3% 3%;
   height: max-content;
   border: 2px solid #ccc;
@@ -65,7 +68,8 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  // height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   align-items: center;
   justify-content: space-around;
@@ -75,6 +79,7 @@ label {
     position: relative;
     width: min-content;
     background: transparent;
+    margin-top: 4vh;
 
     &::before {
       content: 'Go back to frontpage';
@@ -83,12 +88,14 @@ label {
       transform: translateX(-50%);
       top: -2.5rem;
       color: #d2dae2;
-      font-size: 20px;
+      font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
       width: max-content;
     }
 
     .go-to-fp-img {
       width: 12vw;
+      min-width: 70px;
+      max-width: 140px;
       display: block;
       margin: 0 auto;
       filter: invert(67%) sepia(41%) saturate(4017%) hue-rotate(178deg) brightness(100%) contrast(91%);
@@ -107,6 +114,11 @@ label {
     .project-info {
       transform: translateY(0);
     }
+
+    .date{
+      margin-top: 2vh;
+      color: #718093;
+    }
   }
 }
 
@@ -118,9 +130,11 @@ label {
 
 .level-btn-group {
   left: 50%;
-  width: 350px;
   display: flex;
   top: 2rem;
+  width: 80vw;
+  min-width: 280px;
+  max-width: 500px;
 
   .level {
     width: 100%;
@@ -130,4 +144,8 @@ label {
   &>*:not(:last-child) {
     margin: 0 2rem 0 0;
   }
+}
+
+#startBtn {
+  margin-bottom: -2px;
 }

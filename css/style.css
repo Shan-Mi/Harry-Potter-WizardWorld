@@ -49,6 +49,7 @@ button:hover {
 
 #spell-body #spell-header .spell-title {
   color: #ccc;
+  text-align: center;
 }
 
 #spell-body #spell-main .spell-card {
@@ -134,6 +135,12 @@ button:hover {
 
 #spell-body .goBackToFrontPage:hover:after {
   width: 110%;
+}
+
+#spell-body #spell-footer .project-info {
+  -webkit-transform: unset;
+      -ms-transform: unset;
+          transform: unset;
 }
 
 /* Wobble Horizontal */
@@ -224,6 +231,16 @@ body {
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   height: 100vh;
+}
+
+#g-body .g-main .list-wrapper {
+  margin: 2rem !important;
+}
+
+@media screen and (min-width: 470px) {
+  .g-main .sticky-wrapper {
+    margin-left: 2vw !important;
+  }
 }
 
 .gryffindor .avatar__tie {
@@ -635,6 +652,13 @@ body {
   opacity: 0;
 }
 
+@media screen and (max-width: 414px) {
+  .sorting-hat__answer {
+    left: -22px;
+    margin-left: unset;
+  }
+}
+
 .sorting-hat__answer:before {
   content: "(";
   position: absolute;
@@ -756,6 +780,9 @@ body {
           animation: show 2s linear infinite;
   font-size: 16px;
   color: #f4d946;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @-webkit-keyframes show {
@@ -848,7 +875,7 @@ body {
 
 /* animation ends */
 .main-content__wrapper {
-  background: center/cover url("../img/hogwarts.png") no-repeat;
+  background: 20%/cover url("../img/hogwarts.png") no-repeat;
 }
 
 #front-page-header {
@@ -878,16 +905,20 @@ body {
 }
 
 #front-page-header .title {
-  width: 400px;
   top: 50%;
   -webkit-filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
           filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
   top: 50%;
   margin: 2rem auto;
+  min-width: 250px;
+  max-width: 500px;
+  width: 70vw;
 }
 
 #front-page-header .frontPageBadge {
-  width: 190px;
+  max-width: 190px;
+  min-width: 100px;
+  width: 20%;
   -webkit-animation: spinIn 2s both;
           animation: spinIn 2s both;
 }
@@ -1379,7 +1410,7 @@ footer {
 
 footer .go-to-spell-wrapper {
   position: absolute;
-  bottom: calc(100vh - 615px);
+  bottom: calc(100vh - 680px);
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -1418,6 +1449,9 @@ footer .go-to-spell-wrapper .go-to-spell:hover {
 
 footer .go-to-spell-wrapper a {
   color: #ccc;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 footer .go-to-spell-wrapper a:hover {
@@ -1618,6 +1652,12 @@ footer .go-to-spell-wrapper a:hover {
   right: 0;
 }
 
+@media screen and (max-width: 414px) {
+  .hamburguer {
+    margin: 1vh 3vw;
+  }
+}
+
 .hamburguer:hover {
   -webkit-animation: zoom 300ms ease-in;
           animation: zoom 300ms ease-in;
@@ -1664,6 +1704,173 @@ footer .project-info {
       -ms-transform: translateY(-2rem);
           transform: translateY(-2rem);
   color: #ccc;
+}
+
+.main-content {
+  padding-top: 5vh;
+}
+
+#back-to-top-btn {
+  display: none;
+}
+
+#back-to-top-btn .go-up-img {
+  display: none;
+}
+
+@media screen and (max-width: 470px) {
+  #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+         -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  #back-to-top-btn:hover {
+    border: none;
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  #back-to-top-btn .go-up-img {
+    width: 100%;
+    display: block;
+  }
+  .go-up-img:hover,
+  .go-up-img:focus {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+  }
+}
+
+@media screen and (max-width: 470px) and (max-width: 992px) {
+  #back-to-top-btn {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 470px) and (max-width: 768px) {
+  #back-to-top-btn {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    bottom: 6px;
+    right: 6px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  /* Animations */
+  .btnEntrance {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-name: btnEntrance;
+            animation-name: btnEntrance;
+  }
+  /* fadeInUp */
+  @-webkit-keyframes btnEntrance {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+              transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+              transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+  }
+  .btnExit {
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-name: btnExit;
+            animation-name: btnExit;
+  }
+  /* fadeOutDown */
+  @-webkit-keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+              transform: translate3d(0, 100%, 0);
+    }
+  }
+  @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+              transform: translate3d(0, 100%, 0);
+    }
+  }
+  .g-main {
+    -ms-grid-columns: unset !important;
+        grid-template-columns: unset !important;
+  }
+  .icon-wrapper {
+    height: unset !important;
+  }
+  .icon-wrapper .big-icon {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .icon-wrapper .small-icon-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .icon-wrapper .go-to-fp {
+    display: none;
+  }
+  .icon-wrapper .search-box {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    bottom: 0;
+    width: 90vw;
+    min-width: calc(100vw - 4rem) !important;
+    margin-top: 2vh;
+  }
 }
 
 #g-body {
@@ -1802,7 +2009,6 @@ footer .project-info {
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 200px;
-  margin: 2rem 2rem 2rem 0;
 }
 
 #g-body .g-main .list-wrapper .role {
@@ -1918,8 +2124,6 @@ footer .project-info {
 
 #g-body .g-main .module .allInfo .wand-img {
   position: absolute;
-  /* For big screen */
-  /* For laptop */
   width: 5vw;
   bottom: 2rem;
   left: 2rem;
@@ -2078,6 +2282,23 @@ footer .project-info {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
+.g-footer > .project-info {
+  -webkit-transform: unset;
+      -ms-transform: unset;
+          transform: unset;
+}
+
+.g-footer > .date {
+  margin-top: 2vh;
+}
+
+@media screen and (max-width: 700px) {
+  .g-footer > .date {
+    margin-top: unset;
+    font-size: calc(10px + (26 - 14) * ((80vw - 300px) / (1600 - 300)));
+  }
+}
+
 #form {
   width: 65%;
   margin-left: 35%;
@@ -2093,6 +2314,9 @@ footer .project-info {
 
 .container {
   width: 500px;
+  width: 80vw !important;
+  min-width: 280px;
+  max-width: 500px;
   padding: 3% 3%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -2152,7 +2376,7 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2170,6 +2394,7 @@ label {
   width: -moz-min-content;
   width: min-content;
   background: transparent;
+  margin-top: 4vh;
 }
 
 #quiz-body .go-to-fp::before {
@@ -2181,7 +2406,7 @@ label {
           transform: translateX(-50%);
   top: -2.5rem;
   color: #d2dae2;
-  font-size: 20px;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -2189,6 +2414,8 @@ label {
 
 #quiz-body .go-to-fp .go-to-fp-img {
   width: 12vw;
+  min-width: 70px;
+  max-width: 140px;
   display: block;
   margin: 0 auto;
   -webkit-filter: invert(67%) sepia(41%) saturate(4017%) hue-rotate(178deg) brightness(100%) contrast(91%);
@@ -2220,6 +2447,11 @@ label {
           transform: translateY(0);
 }
 
+#quiz-body #quiz-footer .date {
+  margin-top: 2vh;
+  color: #718093;
+}
+
 .scoreAndQuestionArea {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2232,11 +2464,13 @@ label {
 
 .level-btn-group {
   left: 50%;
-  width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 2rem;
+  width: 80vw;
+  min-width: 280px;
+  max-width: 500px;
 }
 
 .level-btn-group .level {
@@ -2246,5 +2480,9 @@ label {
 
 .level-btn-group > *:not(:last-child) {
   margin: 0 2rem 0 0;
+}
+
+#startBtn {
+  margin-bottom: -2px;
 }
 /*# sourceMappingURL=style.css.map */
