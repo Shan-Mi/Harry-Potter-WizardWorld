@@ -207,3 +207,5 @@ const goToFrontPageBtn = document.querySelector('.go-to-fp')
 goToFrontPageBtn.addEventListener('click', () => {
   window.location = 'index.html'
 })
+
+document.querySelector('.date').innerHTML = new Date()
