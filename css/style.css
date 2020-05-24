@@ -2318,7 +2318,10 @@ footer .project-info {
             order: 1;
   }
   .icon-wrapper .go-to-fp {
-    display: none;
+    -webkit-box-ordinal-group: 3 !important;
+        -ms-flex-order: 2 !important;
+            order: 2 !important;
+    margin: 2em auto 0.2em;
   }
   .icon-wrapper .search-box {
     -webkit-box-ordinal-group: 3;

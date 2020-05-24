@@ -495,7 +495,9 @@
     }
 
     .go-to-fp {
-      display: none;
+      // display: none;
+      order: 2 !important;
+      margin: 2em auto 0.2em;
     }
 
     .search-box {
