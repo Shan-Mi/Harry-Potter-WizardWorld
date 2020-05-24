@@ -10,13 +10,13 @@ This is a website for fans of Harry Potter film series, and here they can see al
 All information will get from Harry Potter API by GET requirement with personal token.
 
 ### Functionality: 
-On loading page, user will get a random house name from clicking sorting Hat and then user will be led to relevant page there all characters belong to this house will be listed in some list form. Only names are listed there, and grouped by their role (teacher/student/etc.). There will be four houses, we can switch to different house by clicking relevant badge.
+On loading page, user will get a random house name from clicking sorting avatar and then user will be led to relevant page there all characters belong to this house will be listed in some small cards. There will be four houses, we can switch to different house by clicking relevant badge.
 
-Once user click a name, a overlay module will be displayed. User could see detailed information which get from that API, and also with one image of that character and a wand (if he/she has any). Maybe add extra information link to other fans website.
+Once user click a small card, a overlay layer and a module with detailed information will be triggered. User could see detailed information which get from that API, and also with one image of that character and a wand (if he/she has any). ~~Maybe add extra information link to other fans website.~~
 
-Search function: User could be able to search their desired character by input name (validation needed: name length more than 2 and less than 20, only alphabet allowed).
+Search function: User could be able to search their desired character by input name.
 
-On loading page there will be a link to spell page, and there a random spell will be got from API. It will be able to go back to startpage as well as get a new spell. Add some animation if possible.
+On loading page there will be a link to spell page, and there a random spell will be got from API. It will be able to go back to startpage as well as get a new spell.
 
 **Added quiz page**
 
@@ -26,7 +26,7 @@ Now there are three different levels, 5 questions - easy; 10 questions - medium;
 - No frameworks, use fetch/axios to get data.
 - Do responsive webdesign if have any extra time.
 - Only use HTML / SASS to create this website from scratch
-
+- Use ES7 Async() and await to handle promises.
 ---
 Following are information that can get from API (https://www.potterapi.com/v1/) :
 ```
@@ -80,3 +80,4 @@ animagus              string
 
 ```
 
+[ON Line Version](https://shanmi.se/wizarland/)
