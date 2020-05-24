@@ -1,14 +1,13 @@
 #spell-body {
   height: 100vh;
-  background: center/ cover no-repeat url('https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background: center/ cover no-repeat
+    url("https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
-
   #spell-header {
-
     .spell-title {
       color: $silver;
       text-align: center;
@@ -16,7 +15,6 @@
   }
 
   #spell-main {
-
     .spell-card {
       width: 70vw;
       height: 50vh;
@@ -27,6 +25,7 @@
       justify-content: space-evenly;
       box-shadow: 18px 22px 18px -21px #cccccc;
       border-radius: 5px;
+      padding: .5em;
 
       .spell-name {
         font-size: 30px;
@@ -34,6 +33,7 @@
 
       .spell-effect {
         font-size: 20px;
+        text-align: center;
       }
 
       .spell-type {
@@ -63,7 +63,7 @@
     transition: color 150ms ease-in-out 0.1s;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       top: 0;
@@ -86,12 +86,11 @@
   }
 
   #spell-footer {
-    .project-info{
+    .project-info {
       transform: unset;
     }
   }
 }
-
 
 /* Wobble Horizontal */
 @keyframes hvr-wobble-horizontal {

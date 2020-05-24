@@ -21,22 +21,24 @@ body {
 }
 
 @mixin bg-gradient($deg, $color1, $color2) {
-  background: linear-gradient($deg,
-      $color1 5%,
-      $color2 5%,
-      $color2 10%,
-      $color1 10%,
-      $color1 20%,
-      $color2 20%,
-      $color2 30%,
-      $color1 30%,
-      $color1 45%,
-      $color2 45%,
-      $color2 55%,
-      $color1 55%,
-      $color1 65%,
-      $color2 65%,
-      $color2 70%);
+  background: linear-gradient(
+    $deg,
+    $color1 5%,
+    $color2 5%,
+    $color2 10%,
+    $color1 10%,
+    $color1 20%,
+    $color2 20%,
+    $color2 30%,
+    $color1 30%,
+    $color1 45%,
+    $color2 45%,
+    $color2 55%,
+    $color1 55%,
+    $color1 65%,
+    $color2 65%,
+    $color2 70%
+  );
 }
 
 .gryffindor {
@@ -82,7 +84,6 @@ body {
 .slytherin,
 .gryffindor,
 .ravenclaw {
-
   .sorting-hat__answer,
   aside.context,
   aside.context a,
@@ -91,10 +92,9 @@ body {
     color: #fff;
   }
 
-  .avatar-gender input:checked+label:after {
+  .avatar-gender input:checked + label:after {
     background: #fff;
   }
-
 }
 
 .avatar {
@@ -248,18 +248,20 @@ body {
       position: absolute;
       width: 100%;
       height: 110px;
-      background: linear-gradient(to right,
-          $brown,
-          $brown-dark 50%,
-          $brown-dark 60%,
-          $brown);
+      background: linear-gradient(
+        to right,
+        $brown,
+        $brown-dark 50%,
+        $brown-dark 60%,
+        $brown
+      );
       top: 110px;
       left: 0;
       border-radius: 0 0 30px 30px;
     }
 
     &.female:before {
-      content: '';
+      content: "";
     }
   }
 
@@ -509,7 +511,7 @@ body {
   margin: 1.5rem auto 0;
   align-items: center;
 
-  >p,
+  > p,
   div {
     flex: auto;
     color: white;
@@ -523,8 +525,8 @@ body {
     opacity: 0;
     color: white;
 
-    &:checked+label:after {
-      content: '';
+    &:checked + label:after {
+      content: "";
       position: absolute;
       width: 12px;
       height: 12px;
@@ -540,7 +542,7 @@ body {
     padding: 5px;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       width: 20px;
       height: 20px;
@@ -630,7 +632,6 @@ body {
   }
 }
 
-
 /* animation ends */
 .main-content__wrapper {
   // background: center / cover url("../img/hogwarts.png") no-repeat;
@@ -638,7 +639,7 @@ body {
 }
 
 #front-page-header {
-  background: left / cover no-repeat url('../img/films-desk.webp');
+  background: left / cover no-repeat url("../img/films-desk.webp");
   height: 100vh;
   position: relative;
   display: flex;
@@ -656,7 +657,8 @@ body {
   .title {
     // width: 400px;
     top: 50%;
-    filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg) brightness(82%) contrast(84%);
+    filter: invert(74%) sepia(10%) saturate(466%) hue-rotate(177deg)
+      brightness(82%) contrast(84%);
     top: 50%;
     margin: 2rem auto;
     min-width: 250px;
@@ -685,11 +687,19 @@ body {
   .quiz {
     padding: 1.5rem;
     background: rgb(80, 126, 177);
-    background: linear-gradient(120deg, #507eb1 0%, #709dc7 17%, #dde9f5 35%, #eaf2f9 47%, #ced3d7 70%, #709dc7 100%);
+    background: linear-gradient(
+      120deg,
+      #507eb1 0%,
+      #709dc7 17%,
+      #dde9f5 35%,
+      #eaf2f9 47%,
+      #ced3d7 70%,
+      #709dc7 100%
+    );
     border-radius: 10px;
     color: $gryffindor-red;
     font-size: 16px;
-    transition: transform .3s;
+    transition: transform 0.3s;
     animation: tada 2s timing-function delay iteration-count direction fill-mode;
 
     &:hover {
@@ -697,8 +707,6 @@ body {
     }
   }
 }
-
-
 
 #fp-main {
   position: relative;
@@ -735,7 +743,7 @@ body {
 
 .sorting-hat__answer.click-reminder {
   &::after {
-    content: 'Click to next scene.';
+    content: "Click to next scene.";
     font-size: 14px;
     transform: skewX(-21deg);
     position: absolute;
@@ -751,21 +759,21 @@ body {
     opacity: 0;
     animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
     transform: rotateZ(0deg) scale3d(0, 0, 0);
-    transform-origin: center center
+    transform-origin: center center;
   }
 
   50% {
-    opacity: 1
+    opacity: 1;
   }
 
   70% {
     transform: rotateZ(380deg) scale3d(1, 1, 1);
-    transform-origin: center center
+    transform-origin: center center;
   }
 
   100% {
     transform: rotateZ(360deg) scale3d(1, 1, 1);
-    transform-origin: center center
+    transform-origin: center center;
   }
 }
 
@@ -922,17 +930,17 @@ body {
 @keyframes flip {
   from {
     transform: perspective(400px) rotateY(-360deg) scale3d(1, 1, 1);
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   50% {
     transform: perspective(400px) rotateY(-180deg) scale3d(1.2, 1.2, 1.2);
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   to {
     transform: perspective(400px) rotateY(0deg) scale3d(1, 1, 1);
-    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035)
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
   }
 }
 
@@ -986,7 +994,6 @@ $body-background: url(https://s3.amazonaws.com/StartupStockPhotos/20140808_Start
 //ZOOM EFFECT ON HOVER MENU ICONS AND LINKS
 
 @keyframes zoom {
-
   0%,
   100% {
     transform: scale(1);
@@ -1021,10 +1028,14 @@ $body-background: url(https://s3.amazonaws.com/StartupStockPhotos/20140808_Start
   transform: translateX(100%);
   transition: all 400ms $transition-type;
   background-color: #026873;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%),
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%),
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.07) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
   background-size: 13px, 29px, 37px, 53px;
 
   .project-info {
@@ -1073,37 +1084,37 @@ $body-background: url(https://s3.amazonaws.com/StartupStockPhotos/20140808_Start
       ul {
         font-size: calc(10px + (26 - 14) * ((80vw - 300px) / (1600 - 300)));
 
-        &>*:not(:last-child) {
-          margin-bottom: .5rem;
+        & > *:not(:last-child) {
+          margin-bottom: 0.5rem;
         }
       }
     }
 
     .house-menu {
       &:nth-of-type(1) {
-        transition-delay: .3s;
+        transition-delay: 0.3s;
       }
 
       &:nth-of-type(2) {
-        transition-delay: .4s;
+        transition-delay: 0.4s;
       }
 
       &:nth-of-type(3) {
-        transition-delay: .5s;
+        transition-delay: 0.5s;
       }
 
       &:nth-of-type(4) {
-        transition-delay: .6s;
+        transition-delay: 0.6s;
       }
     }
 
     .spell-menu {
-      transition-delay: .7s;
+      transition-delay: 0.7s;
       margin-top: 2rem;
     }
 
     .quiz-menu {
-      transition-delay: .8s;
+      transition-delay: 0.8s;
     }
 
     li {
