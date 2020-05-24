@@ -1,9 +1,9 @@
 # Harry-Potter-Wizarland Website [ONLINE VERSION](https://shanmi.se/wizarland/index.html)
-
+![](img/frontpage.gif)
 This is an individuel assignment for Nackademin Frontend Project, topic is made up by myself. 
 
 ### Background:
-This is a website for fans of Harry Potter film series, and here they can see all characters from Gryffindor / Hufflepuff / Ravenclaw / Slytherin as well as spells, etc. basically everything about Harry Potter’s magic world. They can also search by character’s name to get character’s information. This website is just for fun, and no user data will be stored, so no database requirement is needed. It is based on [API Link 1](https://www.potterapi.com/v1/) or maybe [API link 2](https://hp-api.herokuapp.com/) [Another website](https://www.wizardingworld.com/discover/films)) Maybe will get some information from here as well.
+This is a website for fans of Harry Potter film series, and here they can see all characters from Gryffindor / Hufflepuff / Ravenclaw / Slytherin as well as spells, etc. basically everything about Harry Potter’s magic world. They can also search by character’s name to get character’s information. This website is just for fun, and no user data will be stored, so no database requirement is needed. It is based on [API Link 1](https://www.potterapi.com/v1/) ~~or maybe [API link 2](https://hp-api.herokuapp.com/)~~ [Another website](https://www.wizardingworld.com/discover/films)) Maybe will get some information from here as well.
 
 🌟 ➡[This figma link](https://www.figma.com/file/Aw0kz9EIwQ3sLLlBpNGe2P/Harry-Potter?node-id=0%3A1)⬅ is a rough design to visuralize the page. 🌟
 
