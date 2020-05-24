@@ -1764,7 +1764,7 @@ footer .project-info {
 #g-body .g-main .sticky-wrapper .icon-wrapper .big-icon::after {
   content: attr(data-info);
   font-size: 20px;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 #g-body .g-main .sticky-wrapper .icon-wrapper .big-icon .icon.big {
@@ -1785,7 +1785,7 @@ footer .project-info {
 }
 
 #g-body .g-main .sticky-wrapper .icon-wrapper .go-to-fp::before {
-  content: 'Go back to frontpage';
+  content: "Go back to frontpage";
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1921,7 +1921,7 @@ footer .project-info {
 }
 
 #g-body .g-main .module .character-avatar {
-  width: 15vw;
+  width: 14vw;
   min-width: 30px;
   max-width: 200px;
   position: absolute;
@@ -1953,12 +1953,12 @@ footer .project-info {
   height: 60%;
   font-size: clamp(16px, 4vw, 22px);
   text-align: left;
-  margin: 7vh 5vw;
+  margin: 12vh 5vw 3vh;
   color: #c1cab0;
 }
 
 #g-body .g-main .module .allInfo > * {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 #g-body .g-main .module .allInfo p {
@@ -2208,11 +2208,11 @@ footer .project-info {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
             transform: scale(1.05);
-    -webkit-transition: -webkit-transform .2s;
-    transition: -webkit-transform .2s;
-    -o-transition: transform .2s;
-    transition: transform .2s;
-    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
   }
 }
 
@@ -2333,7 +2333,7 @@ footer .project-info {
 
 #form {
   width: 65%;
-  margin-left: 35%;
+  margin: 0.3em auto 0;
 }
 
 .right {
@@ -2430,7 +2430,7 @@ label {
 }
 
 #quiz-body .go-to-fp::before {
-  content: 'Go back to frontpage';
+  content: "Go back to frontpage";
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -2516,4 +2516,12 @@ label {
 
 #startBtn {
   margin-bottom: -2px;
+}
+
+#resetBtn {
+  margin: 1em auto 0.2em;
+}
+
+#submitBtn {
+  margin: 0.5em auto 0;
 }
